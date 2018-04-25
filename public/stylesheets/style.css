@@ -1,0 +1,231 @@
+body {
+  padding: 50px;
+  font-family: 'Kanit','Cagliostro', sans-serif;
+}
+
+a {
+  color: #0099FF;
+}
+
+em {
+  font-size: 200%;
+}
+
+span {
+  font-size: 130%;
+}
+
+blockquote {
+  margin: 0 auto;
+  padding: 1em;
+  border-left: 5px solid #999;
+}
+blockquote:before {
+  display: none;
+}
+blockquote:not(:first-of-type) {
+  margin-top: .5em;
+}
+blockquote p {
+  color: #555;
+  font-size: 12pt;
+  line-height: 1.4;
+  font-family: 'PT Serif', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+}
+blockquote footer {
+  margin-top: .5em;
+  padding: 0;
+  color: #777;
+  font-size: 12pt;
+  text-align: left;
+  font-style: italic;
+}
+blockquote footer:before {
+  content: '— ';
+}
+blockquote:nth-of-type(even) {
+  text-align: right;
+  border-left: none;
+  border-right: 5px solid #999;
+}
+blockquote:nth-of-type(even) footer {
+  text-align: right;
+}
+blockquote:nth-of-type(even) footer:before {
+  content: '';
+}
+blockquote:nth-of-type(even) footer:after {
+  content: ' —';
+}
+@element 'blockquote' and (min-width: 300px) {
+  blockquote {
+    padding: 1em 20% 1em 1em;
+  }
+  blockquote p {
+    font-size: 14pt;
+  }
+  blockquote:nth-of-type(even) {
+    padding: 1em 1em 1em 20%;
+  }
+}
+
+svg { width:100%; height: 100% }
+
+article{
+	text-align: center!important;
+}
+
+.counter-value {
+  line-height: 100px;
+  font-size:65px;
+}
+
+
+/* Map CSS */
+
+#map-container {
+  text-align: center!important;
+  width: 960px;
+  height: 700px; 
+}
+
+.states {
+  /* fill: black; */
+  fill: red;
+  /* stroke: #daeff5c2; */
+}
+
+.states :hover {
+  fill: #847f87!important;  
+  /* fill: red; */
+
+}
+
+.state-borders {
+  fill: none;
+  stroke: #c3e3ebc2;
+  stroke-width: 0.5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+#legend {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+
+#legend .legend-title {
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+#legend .legend-item {
+  margin-bottom: 4px;
+  font-size: .8em;
+}
+
+#legend .legend-swatch,
+#legend .legend-value {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+#legend .legend-swatch {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+/* Tooltip CSS */
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  height: 60px;
+  padding: 2px;
+  font-size: 10px;
+  opacity: 1;
+  background: #fbffff;
+  border: 0px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+div.legendtip {
+  position: absolute;
+  text-align: center;
+  color: white;
+  width: 150px;
+  height: 35px;
+  padding: 2px;
+  font-size: 10px;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.8);
+  border: 0px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+div.infotip {
+  position: absolute;
+  text-align: center;
+  color: white;
+  width: 150px;
+  height: 35px;
+  padding: 2px;
+  font-size: 10px;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.8);
+  border: 0px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+div.heatmaptip {
+  position: absolute;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  width: 50px;
+  height: 40px;
+  padding: 2px;
+  font-size: 14px;
+  opacity: 1;
+  border: 0px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+/* Bar Chart CSS */
+.axis--x path {
+  display: none;
+}
+
+.bars:hover{
+  opacity: 0.6;
+}
+
+/* Heatmap CSS */
+.heatmap-rect.bordered {
+  stroke: #E6E6E6;
+  stroke-width:2px;
+}
+
+.heatmap-rect:hover{
+  opacity: 0.7;
+}
+
+.heatmap-text.mono {
+  font-size: 9pt;
+  fill: #aaa;
+}
+
+.heatmap-text.axis-workweek {
+  fill: #000;
+}
+
+.heatmap-text.axis-worktime {
+  fill: #000;
+}
