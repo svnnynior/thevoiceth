@@ -18,20 +18,24 @@
     <title>The <%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body background="/images/thevoice_stage5.jpg" style="background-repeat:no-repeat;background-size:cover; background-color: black; background-position-y: 23.5em">
+  <body style="background-color: black;">
     
     <!-- Top Page -->
-    <div class="container" style="top:8em;position:relative;" >
+    <div class="container" style="margin-top:8em;position:relative;" >
       <h1 class="text-center" style="font-family:'Russo One';font-size:110px; color: white">The <%= title %></h1>
       <h1 class="text-center" style="font-family:'Julius Sans One';font-size:30px; font-weight: 300; color: white">A Statistical Guide through The Voice Thailand's Blind Audition</h1>
     </div>
 
-    <!-- Section 1 -->
+    <div style="background-image:url('/images/thevoice_stage5.jpg'); background-repeat:no-repeat; background-size: cover; position: absolute; top: 25em; left: 0; right:0; height:600px">
+
+    </div>
+
+    <!-- Section 1: Overview -->
     <!-- Stats -->
-    <div class="container" style="top:70em;position:relative;" >
+    <div class="container" style="margin-top:55em;position:relative;" >
         <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Overview</h1>
     </div>
-    <div class="container" style="top:77em;position:relative;color: white">
+    <div class="container" style="margin-top:6em;position:relative;color: white">
       <div class="row justify-content-md-center">
         <div class="col-3 text-center" id="counter">
           <span class="counter-value" data-count="6"></span>
@@ -49,8 +53,8 @@
     </div>
 
     <!-- Bar Chart -->
-    <div class="container" style="top:80em;position:relative;color: white;">
-      <div class="row justify-content-md-center" style="top:6em;position:relative;height:15em;">
+    <div class="container" style="margin-top:5em;position:relative;color: white;">
+      <div class="row justify-content-md-center" style="margin-top:6em;position:relative;height:15em;">
         <div class="col-sm-5 text-center" style="height:100%">
           <div style="height:100%; color: white; fill: white!important" id="graph-1"></div>
           <p style="font-size: 24px">Season per Coach</p>
@@ -64,14 +68,64 @@
       </div>
     </div>
 
-    <!-- Section 2 -->
-    <div class="container" style="top:100em;position:relative;" >
+    <!-- Section 2: Try Audition -->
+    <div class="container" style="margin-top:20em;position:relative;" >
+        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">The Try Audition</h1>
+    </div>
+    <form style="margin-top: 7em; color:white;" id="try-audition-form">
+      <div class="form-row align-items-center">
+        <div class="col-md-2">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputGenre">Song Genre</label>
+          <select id="inputGenre" class="form-control" required>
+            <option selected>Thai Country</option>
+            <option>Rock</option>
+            <option>Pop</option>
+            <option>Alternative</option>
+            <option>Country</option>
+            <option>Jazz</option>
+            <option>R&B</option>
+            <option>Soul</option>
+            <option>Hip-Hop</option>
+            <option>Acoustic</option>
+            <option>Male</option>
+            <option>Blues</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputLanguage">Language</label>
+          <select id="inputLanguage" class="form-control" required>
+            <option selected>Thai</option>
+            <option>English</option>
+            <option>Japanese</option>
+            <option>Korean</option>
+            <option>Chinese</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputSexuality">Sexuality</label>
+            <select id="inputSexuality" class="form-control" required>
+              <option>Male</option>
+              <option selected>Female</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputAge">Age</label>
+            <input type="text" class="form-control" id="inputAge" required>
+          </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+      <div class="col-md-12 text-center">
+        <button id="auditionButton" style="margin-top: 5em;" type="submit" class="btn btn-lg btn-primary">Try Audition !</button>
+      </div>
+    </form>
+
+    <!-- Section 3: Coaches Profile -->
+    <div class="container" style="margin-top:20em;position:relative;" >
         <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Coaches Profile</h1>
     </div>
-
-    <!-- Section 3 -->
-
-
 
     <!-- Optional JavaScript -->
     <!-- D3 Library -->
@@ -113,6 +167,35 @@
           isPassed = 1
         }
 
+      })
+    </script>
+
+    <!-- Try Audition Submit -->
+    <script>
+      $(function () {
+        var auditionButton = $('#auditionButton')
+        $('#try-audition-form').on('submit',function (e) {
+          var genre = $("#inputGenre").val()
+          var sexuality = $("#inputSexuality").val()
+          var age = $("#inputAge").val()
+          var language = $("#inputLanguage").val()
+          const form_answer = {
+            genre: genre,
+            sexuality: sexuality,
+            age: age,
+            language: language
+          }
+          $.ajax({
+            type: 'post',
+            url: '/api/audition',
+            data: form_answer,
+          })
+          .done((data) => {
+            console.log(auditionButton)
+            alert($('auditionButton'))
+          })
+          e.preventDefault()
+        })
       })
     </script>
 

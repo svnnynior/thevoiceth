@@ -52,4 +52,14 @@ router.post('/songArtist', function(req, res, next) {
 
 })
 
+router.post('/audition', function(req, res, next) {
+
+  const result = {
+    result: 'Yes',
+    coach: ['Kong', 'Joey']
+  }
+  res.send(result)
+
+})
+
 module.exports = router
