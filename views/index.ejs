@@ -23,7 +23,8 @@
     <!-- Top Page -->
     <div class="container" style="margin-top:8em;position:relative;" >
       <h1 class="text-center" style="font-family:'Russo One';font-size:110px; color: white">The <%= title %></h1>
-      <h1 class="text-center" style="font-family:'Julius Sans One';font-size:30px; font-weight: 300; color: white">A Statistical Guide through The Voice Thailand's Blind Audition</h1>
+      <!-- <h1 class="text-center" style="font-family:'Julius Sans One';font-size:30px; font-weight: 300; color: white">A Statistical Guide through The Voice Thailand's Blind Audition</h1> -->
+      <h1 class="text-center" style="font-family:'Julius Sans One';font-size:30px; font-weight: 300; color: white">Is it really about the <b style="font-size:40px"><i>VOICE</i> ?</b></h1>
     </div>
 
     <div style="background-image:url('/images/thevoice_stage5.jpg'); background-repeat:no-repeat; background-size: cover; position: absolute; top: 25em; left: 0; right:0; height:600px">
@@ -46,7 +47,7 @@
           <p style="font-size: 24px">Coaches</p>
         </div>
         <div class="col-3 text-center" id="counter">
-          <span class="counter-value" data-count="1232"></span>
+          <span class="counter-value" data-count="372"></span>
           <p style="font-size: 24px">Contenders</p>
         </div>
       </div>
@@ -92,27 +93,41 @@
             <option>Male</option>
             <option>Blues</option>
           </select>
+          <small id="genreHelpBlock" class="form-text text-muted">
+            <br>
+            <br>
+          </small>
         </div>
         <div class="form-group col-md-2">
           <label for="inputLanguage">Language</label>
           <select id="inputLanguage" class="form-control" required>
             <option selected>Thai</option>
             <option>English</option>
-            <option>Japanese</option>
-            <option>Korean</option>
-            <option>Chinese</option>
+            <option>Others</option>
           </select>
+          <small id="languageHelpBlock" class="form-text text-muted">
+            <br>
+            <br>
+          </small>
         </div>
         <div class="form-group col-md-2">
             <label for="inputSexuality">Sexuality</label>
             <select id="inputSexuality" class="form-control" required>
               <option>Male</option>
               <option selected>Female</option>
+              <option>More than one person</option>
             </select>
+            <small id="ageHelpBlock" class="form-text text-muted">
+              <br>
+              <br>
+            </small>
           </div>
           <div class="form-group col-md-2">
             <label for="inputAge">Age</label>
             <input type="text" class="form-control" id="inputAge" required>
+            <small id="ageHelpBlock" class="form-text text-muted" style="top:1em">
+              In case of more than one person, fill in one of the person's age
+            </small>
           </div>
         <div class="col-md-2">
         </div>
@@ -124,7 +139,17 @@
 
     <!-- Section 3: Coaches Profile -->
     <div class="container" style="margin-top:20em;position:relative;" >
-        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Coaches Profile</h1>
+        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Coaches Profiles</h1>
+    </div>
+
+    <!-- Section 4: Contender Clustering -->
+    <div class="container" style="margin-top:20em;position:relative;" >
+        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Contenders Clustering</h1>
+    </div>
+
+    <!-- Section 5: Conclusion -->
+    <div class="container" style="margin-top:20em;position:relative;" >
+        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Conclusion</h1>
     </div>
 
     <!-- Optional JavaScript -->
