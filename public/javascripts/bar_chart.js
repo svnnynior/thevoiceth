@@ -1,32 +1,19 @@
 d3.queue()
-    .defer(d3.csv, "../data/texas_last_statement.csv")
+    .defer(d3.csv, "../data/overview.csv")
     .await(ready)
 
 function ready(error, data) {
   if (error) throw error
 
-  var offenders_sum = d3.nest()
-    .key(function(d) { return d.Race })
-    .rollup(function(v) { return {
-      count: v.length,
-      num_victim: d3.sum(v, function(d) { return parseInt(d.NumberVictim) }),
-      avg_num_victim: d3.mean(v, function(d) { return parseInt(d.NumberVictim) })
-    } })
-    .entries(data)
-
-  drawGraph1(offenders_sum)
-  drawGraph2(offenders_sum)
-  drawGraph3(data)
+  drawChart1(data)
+  drawChart2(data)
 
 }
 
 // Number of Victim Group by Offender Race
-function drawGraph1(offenders_sum){
+function drawChart1(data){
     
-  var races = offenders_sum.map(d => d.key)
-  var color = d3.scaleOrdinal()
-    .domain(races)
-    .range(["#ead8d0", "#f7e4dd", "#dec0bb", "#847f87"])
+  var name = data.map(d => d.Coach)
 
   var svg_graph1 = d3.select("#graph-1").append("svg")
   
@@ -44,8 +31,8 @@ function drawGraph1(offenders_sum){
     width = bounds.width - margin.left - margin.right,
     height = bounds.height - margin.top - margin.bottom
 
-  x.domain(offenders_sum.map(function (d) { return d.key }))
-  y.domain([0, d3.max(offenders_sum, function (d) { return d.value.count })])
+  x.domain(data.map(function (d) { return d.Coach }))
+  y.domain([0, d3.max(data, function (d) { return d.NumSeason })])
 
   draw_inside_graph1()
   d3.select(window).on('resize', draw_inside_graph1)
@@ -54,43 +41,53 @@ function drawGraph1(offenders_sum){
     x.rangeRound([0, width])
     y.rangeRound([height, 0])
 
+    var xAxis = d3.axisBottom(x)
+
+    function customXAxis(g) {
+      g.call(xAxis);
+      g.selectAll(".tick text").style("fill", "white")
+    }
+    
     g_graph1.select(".axis--x")
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x))
-
+        .call(customXAxis)
 
     var g_bar_text = g_graph1.append("g")
 
-    var bars = g_bar_text.selectAll("rect").data(offenders_sum)
+    var bars = g_bar_text.selectAll("rect").data(data)
     // ENTER
     bars.enter().append("rect")
       .attr("class", "bars")
-      .attr("x", function (d) { return x(d.key) })
-      .attr("y", function (d) { return y(d.value.count) })
-      .style("fill", function(d){ return color(d.key)})
+      .attr("x", function (d) { return x(d.Coach) })
+      .attr("y", function (d) { return y(d.NumSeason) })
+      .style("fill", function(d){ 
+        if (d.NumSeason === '6'){
+          return 'FE737A'
+        }else{
+          return '74B4ED'
+        }
+      })
       .attr("width", x.bandwidth())
-      .attr("height", function (d) { return height - y(d.value.count) })
+      .attr("height", function (d) { return height - y(d.NumSeason) })
 
 
-    var texts = g_bar_text.selectAll("text").data(offenders_sum)
+    var texts = g_bar_text.selectAll("text").data(data)
     // ENTER
     texts.enter().append("text")
-      .attr("x", function (d) { return x(d.key) + 20})
-      .attr("y", function (d) { return y(d.value.count) - 5 })
+      .attr("x", function (d) { return x(d.Coach) + 25})
+      .attr("y", function (d) { return y(d.NumSeason) - 5 })
       .style("margin-bottom", "10")
-      .text(function(d){return d.value.count})
+      .style("fill", 'white')
+      .text(function(d){return d.NumSeason})
 
     }
 
 }
 
 // Number of Offender Group by Offender Race
-function drawGraph2(offenders_sum){
+function drawChart2(data){
 
-  var races = offenders_sum.map(d => d.key)
-  var color = d3.scaleOrdinal()
-    .domain(races)
-    .range(["#ead8d0", "#f7e4dd", "#dec0bb", "#847f87"])
+  var name = data.map(d => d.Coach)
 
   var svg_graph2 = d3.select("#graph-2").append("svg")
   
@@ -109,8 +106,8 @@ function drawGraph2(offenders_sum){
     width = bounds.width - margin.left - margin.right,
     height = bounds.height - margin.top - margin.bottom
 
-  x.domain(offenders_sum.map(function (d) { return d.key }))
-  y.domain([0, d3.max(offenders_sum, function (d) { return d.value.avg_num_victim })])
+  x.domain(data.map(function (d) { return d.Coach }))
+  y.domain([0, d3.max(data, function (d) { return d.Win })])
 
   draw_inside_graph2()
   d3.select(window).on('resize', draw_inside_graph2)
@@ -119,35 +116,46 @@ function drawGraph2(offenders_sum){
     x.rangeRound([0, width])
     y.rangeRound([height, 0])
 
+    var xAxis = d3.axisBottom(x)
+
+    function customXAxis(g) {
+      g.call(xAxis);
+      g.selectAll(".tick text").style("fill", "white")
+    }
+    
     g_graph2.select(".axis--x")
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x))
+        .call(customXAxis)
+
 
 
     var g_bar_text = g_graph2.append("g")
 
-    var bars = g_bar_text.selectAll("rect").data(offenders_sum)
+    var bars = g_bar_text.selectAll("rect").data(data)
     bars.enter().append("rect")
       .attr("class", "bars")
-      .attr("x", function (d) { return x(d.key) })
-      .attr("y", function (d) { return y(Number((d.value.avg_num_victim).toFixed(2))) })
-      .style("fill", function(d){ return color(d.key)})
+      .attr("x", function (d) { return x(d.Coach) })
+      .attr("y", function (d) { return y(d.Win) })
+      .style("fill", function(d){ 
+        if (d.Win === '2'){
+          return 'FE737A'
+        }else{
+          return '74B4ED'
+        }
+      })
       .attr("width", x.bandwidth())
-      .attr("height", function (d) { return height - y(Number((d.value.avg_num_victim).toFixed(2))) })
+      .attr("height", function (d) { return height - y(d.Win) })
 
 
-    var texts = g_bar_text.selectAll("text").data(offenders_sum)
+    var texts = g_bar_text.selectAll("text").data(data)
     texts.enter().append("text")
-      .attr("x", function (d) { return x(d.key) + 20})
-      .attr("y", function (d) { return y(Number((d.value.avg_num_victim).toFixed(2))) - 5 })
+      .attr("x", function (d) { return x(d.Coach) + 25})
+      .attr("y", function (d) { return y(d.Win) - 5 })
+      .style("fill", 'white')
       .style("margin-bottom", "10")
-      .text(function(d){return Number((d.value.avg_num_victim).toFixed(2))})
+      .text(function(d){return d.Win})
 
     }
-
-}
-
-function drawGraph3(data){
 
 }
 

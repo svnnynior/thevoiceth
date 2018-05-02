@@ -18,24 +18,106 @@
     <title>The <%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body background="/images/thevoice_stage5.jpg" style="background-repeat:no-repeat;background-size:cover; background-color: black; background-position-y: 24em">
+  <body background="/images/thevoice_stage5.jpg" style="background-repeat:no-repeat;background-size:cover; background-color: black; background-position-y: 23.5em">
     
     <!-- Top Page -->
-    <div class="container" style="top:9em;position:relative;" >
+    <div class="container" style="top:8em;position:relative;" >
       <h1 class="text-center" style="font-family:'Russo One';font-size:110px; color: white">The <%= title %></h1>
-      <h1 class="text-center" style="font-family:'Julius Sans One';font-size:30px; font-weight: 300; color: white">A Statistical Guide through The Voice Thailand Blind Audition</h1>
+      <h1 class="text-center" style="font-family:'Julius Sans One';font-size:30px; font-weight: 300; color: white">A Statistical Guide through The Voice Thailand's Blind Audition</h1>
     </div>
 
     <!-- Section 1 -->
-    <div class="container" style="top:60em;position:relative;" >
-        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Section 1</h1>
+    <!-- Stats -->
+    <div class="container" style="top:70em;position:relative;" >
+        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Overview</h1>
+    </div>
+    <div class="container" style="top:77em;position:relative;color: white">
+      <div class="row justify-content-md-center">
+        <div class="col-3 text-center" id="counter">
+          <span class="counter-value" data-count="6"></span>
+          <p style="font-size: 24px">Seasons</p>
+        </div>
+        <div class="col-4 text-center" id="counter">
+          <span class="counter-value" data-count="6"></span>
+          <p style="font-size: 24px">Coaches</p>
+        </div>
+        <div class="col-3 text-center" id="counter">
+          <span class="counter-value" data-count="1232"></span>
+          <p style="font-size: 24px">Contenders</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bar Chart -->
+    <div class="container" style="top:80em;position:relative;color: white;">
+      <div class="row justify-content-md-center" style="top:6em;position:relative;height:15em;">
+        <div class="col-sm-5 text-center" style="height:100%">
+          <div style="height:100%; color: white; fill: white!important" id="graph-1"></div>
+          <p style="font-size: 24px">Season per Coach</p>
+        </div>
+        <div class="col-sm-1 text-center">
+        </div>
+        <div class="col-sm-5 text-center" style="height:100%">
+          <div style="height:100%" id="graph-2"></div>
+          <p style="font-size: 24px">Winning per Coach</p>
+        </div>
+      </div>
     </div>
 
     <!-- Section 2 -->
-    <div class="container" style="top:120em;position:relative;" >
-        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Section 2</h1>
+    <div class="container" style="top:100em;position:relative;" >
+        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Coaches Profile</h1>
     </div>
+
+    <!-- Section 3 -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- D3 Library -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- jQuery Code -->
     
+    <!-- Counter Up -->
+    <script>
+      var isPassed = 0;
+      $(window).scroll(function() {
+        var oTop = $('#counter').offset().top - window.innerHeight;
+        if (isPassed == 0 && $(window).scrollTop() > oTop) {
+          $('.counter-value').each(function() {
+            var $this = $(this),
+              countTo = $this.attr('data-count')
+            $({
+              countNum: $this.text()
+            }).animate({
+                countNum: countTo
+              },
+              {
+                duration: 3500,
+                easing: 'swing',
+                step: function() {
+                  $this.text(Math.floor(this.countNum));
+                },
+                complete: function() {
+                  $this.text(this.countNum);
+                }
+              })
+          })
+          isPassed = 1
+        }
+
+      })
+    </script>
+
+    <!-- D3 Code -->
+    <script src="/javascripts/bar_chart.js"></script>
   </body>
 
 </html>
