@@ -55,7 +55,7 @@ router.post('/songArtist', function(req, res, next) {
 router.post('/audition', function(req, res, next) {
 
   const result = {
-    result: 'Yes',
+    result: 'No',
     coach: ['Kong', 'Joey']
   }
   res.send(result)
