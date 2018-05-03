@@ -1,43 +1,43 @@
 ﻿Coach,genre,percentage
-Kong,Thai Country,46.2
-Kong,Pop,47.3
-Kong,Rock,57.5
-Kong,Hip-Hop & Alternative,40
-Kong,Country & Acoustic,43.7
-Kong,Jazz & Soul & Blues,48.2
-Kong,R&B,38.4
-Kim,Thai Country,36.1
-Kim,Pop,33.0
-Kim,Rock,23.0
-Kim,Hip-Hop & Alternative,44.4
-Kim,Country & Acoustic,44.4
-Kim,Jazz & Soul & Blues,25
-Kim,R&B,40
-Joey,Thai Country,40.7
-Joey,Pop,33.5
-Joey,Rock,28.2
-Joey,Hip-Hop & Alternative,45
-Joey,Country & Acoustic,52.0
-Joey,Jazz & Soul & Blues,41.3
-Joey,R&B,30.7
-Stamp,Thai Country,40.9
-Stamp,Pop,38.7
-Stamp,Rock,47.0
-Stamp,Hip-Hop & Alternative,66.6
-Stamp,Country & Acoustic,39.0
-Stamp,Jazz & Soul & Blues,59.9
-Stamp,R&B,33.3
-Singto,Thai Country,37.5
-Singto,Pop,39.5
-Singto,Rock,56.5
-Singto,Hip-Hop & Alternative,35.7
-Singto,Country & Acoustic,14.2
-Singto,Jazz & Soul & Blues,42.8
-Singto,R&B,35.7
-Da,Thai Country,22.2
-Da,Pop,44.6
-Da,Rock,31.5
-Da,Hip-Hop & Alternative,45.4
-Da,Country & Acoustic,66.6
-Da,Jazz & Soul & Blues,20
-Da,R&B,45.45
+Kong,1,46.2
+Kong,2,47.3
+Kong,3,57.5
+Kong,4,40
+Kong,5,43.7
+Kong,6,48.2
+Kong,7,38.4
+Kim,1,36.1
+Kim,2,33.0
+Kim,3,23.0
+Kim,4,44.4
+Kim,5,44.4
+Kim,6,25
+Kim,7,40
+Joey,1,40.7
+Joey,2,33.5
+Joey,3,28.2
+Joey,4,45
+Joey,5,52.0
+Joey,6,41.3
+Joey,7,30.7
+Stamp,1,40.9
+Stamp,2,38.7
+Stamp,3,47.0
+Stamp,4,66.6
+Stamp,5,39.0
+Stamp,6,59.9
+Stamp,7,33.3
+Singto,1,37.5
+Singto,2,39.5
+Singto,3,56.5
+Singto,4,35.7
+Singto,5,14.2
+Singto,6,42.8
+Singto,7,35.7
+Da,1,22.2
+Da,2,44.6
+Da,3,31.5
+Da,4,45.4
+Da,5,66.6
+Da,6,20
+Da,7,45.45

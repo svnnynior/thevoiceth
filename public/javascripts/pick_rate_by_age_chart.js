@@ -125,8 +125,6 @@ function drawPickRateAge_Stamp(data){
       x.rangeRound([0, width])
       y.rangeRound([height, 0])
   
-      console.log(height)
-  
       var xAxis = d3.axisBottom(x)
   
       function customXAxis(g) {
@@ -148,13 +146,7 @@ function drawPickRateAge_Stamp(data){
         .attr("x", function (d) { return x(d.age) })
         .attr("y", function (d) { return y(d.percentage) })
         .style("fill", function(d){ 
-          if (d.age === '<20'){
-            return 'E6B0AA'
-          }else if(d.age === '20-40'){
-            return 'F1948A'
-          }else{
-            return '#EC7063'
-          }
+          return '74B4ED'
         })
         .attr("width", x.bandwidth())
         .attr("height", function (d) { return height - y(d.percentage) })

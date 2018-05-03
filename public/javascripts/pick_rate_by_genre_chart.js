@@ -5,7 +5,6 @@ d3.queue()
 function ready(error, data) {
   if (error) throw error
 
-  console.log(data)
   var data_kong, data_stamp, data_da, data_kim, data_joey, data_singto
 
   data_kong = data.filter(data => data.Coach === 'Kong')
@@ -26,7 +25,6 @@ function ready(error, data) {
 
 function drawPickRateGenre_Kong(data){
 
-  console.log(data)
   var max = d3.max(data, function (d) { return d.percentage })
   var svg_graph4 = d3.select("#chartPickRateGenre_Kong").append("svg")
   
@@ -75,9 +73,9 @@ function drawPickRateGenre_Kong(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'D4E6F1'
+          return 'F1948A'
         }else{
-          return 'E6B0AA'
+          return '74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -148,9 +146,9 @@ function drawPickRateGenre_Stamp(data){
     .attr("y", function (d) { return y(d.percentage) })
     .style("fill", function(d){ 
       if (d.percentage === max){
-        return 'D4E6F1'
+        return 'F1948A'
       }else{
-        return 'E6B0AA'
+        return '74B4ED'
       }
     })
     .attr("width", x.bandwidth())
@@ -222,9 +220,9 @@ function drawPickRateGenre_Kim(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'D4E6F1'
+          return 'F1948A'
         }else{
-          return 'E6B0AA'
+          return '74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -296,9 +294,9 @@ function drawPickRateGenre_Joey(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'D4E6F1'
+          return 'F1948A'
         }else{
-          return 'E6B0AA'
+          return '74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -369,9 +367,9 @@ function drawPickRateGenre_Singto(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'D4E6F1'
+          return 'F1948A'
         }else{
-          return 'E6B0AA'
+          return '74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -443,9 +441,9 @@ function drawPickRateGenre_Da(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'D4E6F1'
+          return 'F1948A'
         }else{
-          return 'E6B0AA'
+          return '74B4ED'
         }
       })
       .attr("width", x.bandwidth())

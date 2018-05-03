@@ -72,11 +72,11 @@ function drawPickRateSex_Kong(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.Sexuality === 'Male'){
-          return '74B4ED'
+          return 'F1948A'
         }else if(d.Sexuality === 'Female'){
-          return 'FE737A'
+          return '74B4ED'
         }else{
-          return 'AC88FF'
+          return 'F1948A'
         }
       })
       .attr("width", x.bandwidth())
@@ -148,9 +148,9 @@ function drawPickRateSex_Joey(data){
         if (d.Sexuality === 'Male'){
           return '74B4ED'
         }else if(d.Sexuality === 'Female'){
-          return 'FE737A'
+          return 'F1948A'
         }else{
-          return 'AC88FF'
+          return '74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -220,11 +220,11 @@ function drawPickRateSex_Kim(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.Sexuality === 'Male'){
-          return '74B4ED'
+          return 'F1948A'
         }else if(d.Sexuality === 'Female'){
-          return 'FE737A'
+          return '74B4ED'
         }else{
-          return 'AC88FF'
+          return '74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -294,11 +294,11 @@ function drawPickRateSex_Stamp(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.Sexuality === 'Male'){
-          return '74B4ED'
+          return 'F1948A'
         }else if(d.Sexuality === 'Female'){
-          return 'FE737A'
+          return '74B4ED'
         }else{
-          return 'AC88FF'
+          return '74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -370,9 +370,9 @@ function drawPickRateSex_Singto(data){
         if (d.Sexuality === 'Male'){
           return '74B4ED'
         }else if(d.Sexuality === 'Female'){
-          return 'FE737A'
+          return 'F1948A'
         }else{
-          return 'AC88FF'
+          return '74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -418,7 +418,7 @@ function drawPickRateSex_Da(data){
   function draw_inside_graph_sex_da(){
     x.rangeRound([0, width])
     y.rangeRound([height, 0])
-    
+
     var xAxis = d3.axisBottom(x)
 
     function customXAxis(g) {
@@ -443,9 +443,9 @@ function drawPickRateSex_Da(data){
         if (d.Sexuality === 'Male'){
           return '74B4ED'
         }else if(d.Sexuality === 'Female'){
-          return 'FE737A'
+          return 'F1948A'
         }else{
-          return 'AC88FF'
+          return '74B4ED'
         }
       })
       .attr("width", x.bandwidth())

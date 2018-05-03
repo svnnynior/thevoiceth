@@ -75,6 +75,34 @@ article{
 	text-align: center!important;
 }
 
+#legend {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+
+#legend .legend-title {
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+#legend .legend-item {
+  margin-bottom: 4px;
+  font-size: .8em;
+}
+
+#legend .legend-swatch,
+#legend .legend-value {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+#legend .legend-swatch {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
 .counter-value {
   line-height: 130px;
   font-size:120px;
@@ -105,13 +133,13 @@ div.tooltip {
 div.legendtip {
   position: absolute;
   text-align: center;
-  color: white;
+  color: black;
   width: 150px;
-  height: 35px;
+  height: 110px;
   padding: 2px;
   font-size: 10px;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   border: 0px;
   border-radius: 3px;
   pointer-events: none;
@@ -120,13 +148,13 @@ div.legendtip {
 div.infotip {
   position: absolute;
   text-align: center;
-  color: white;
+  color: black;
   width: 150px;
   height: 35px;
   padding: 2px;
   font-size: 10px;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   border: 0px;
   border-radius: 3px;
   pointer-events: none;
