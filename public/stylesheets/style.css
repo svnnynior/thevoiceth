@@ -81,6 +81,12 @@ article{
 }
 
 
+.counter-value-kong {
+  line-height: 40px;
+  font-size:30px;
+}
+
+
 /* Tooltip CSS */
 div.tooltip {
   position: absolute;

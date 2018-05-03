@@ -47,7 +47,7 @@
           <p style="font-size: 24px">Coaches</p>
         </div>
         <div class="col-3 text-center" id="counter">
-          <span class="counter-value" data-count="372"></span>
+          <span class="counter-value" data-count="389"></span>
           <p style="font-size: 24px">Contenders</p>
         </div>
       </div>
@@ -58,13 +58,13 @@
       <div class="row justify-content-md-center" style="margin-top:6em;position:relative;height:15em;">
         <div class="col-sm-5 text-center" style="height:100%">
           <div style="height:100%; color: white; fill: white!important" id="graph-1"></div>
-          <p style="font-size: 24px">Season per Coach</p>
+          <p style="font-size: 24px">Season</p>
         </div>
         <div class="col-sm-1 text-center">
         </div>
         <div class="col-sm-5 text-center" style="height:100%">
           <div style="height:100%" id="graph-2"></div>
-          <p style="font-size: 24px">Winning per Coach</p>
+          <p style="font-size: 24px">Winning</p>
         </div>
       </div>
     </div>
@@ -75,6 +75,20 @@
     </div>
     <form style="margin-top: 7em; color:white;" id="try-audition-form">
       <div class="form-row align-items-center">
+        <div class="col-md-4">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputSong">Song</label>
+          <input type="text" class="form-control" id="inputSong" required>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputArtist">Artist</label>
+          <input type="text" class="form-control" id="inputArtist" required>
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+      <div class="form-row align-items-center" style="margin-top: 1em;">
         <div class="col-md-2">
         </div>
         <div class="form-group col-md-2">
@@ -83,15 +97,11 @@
             <option selected>Thai Country</option>
             <option>Rock</option>
             <option>Pop</option>
-            <option>Alternative</option>
+            <option>Hip-Hop/Alternative</option>
             <option>Country</option>
-            <option>Jazz</option>
+            <option>Jazz/Soul/Blues</option>
             <option>R&B</option>
-            <option>Soul</option>
-            <option>Hip-Hop</option>
             <option>Acoustic</option>
-            <option>Male</option>
-            <option>Blues</option>
           </select>
           <small id="genreHelpBlock" class="form-text text-muted">
             <br>
@@ -147,10 +157,222 @@
     <div class="container" style="margin-top:20em;position:relative;" >
         <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Coaches Profiles</h1>
     </div>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-md-5">
+        </div>
+        <div class="form-group col-md-2 text-center">
+          <label for="inputSelectCoach" style="color:white; margin-top: 2em;">Pick a Coach</label>
+          <select id="inputSelectCoach" class="form-control" onchange="changeCoachProfile()" required>
+            <option>Kong</option>
+            <option>Joey</option>
+            <option>Stamp</option>
+            <option>Kim</option>
+            <option>Singto</option>
+            <option>Da</option>
+          </select>
+        </div>
+        <div class="col-md-5">
+        </div>
+      </div>>
+    </div>
+
+    <!-- Coach Kong -->
+    <div id="coach-kong-profile" class="container animate-bottom" style="margin-top:4em;position:relative;color: white">
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-3 text-center" style="color: white">
+          <h2 style="font-family:'Russo One">Coach Kong</h2>
+          <img src="/images/mock_user.png" class="w-75 rounded-circle" style="margin-top:2em;" />
+          <div class="row" style="margin-top: 3em;">
+            <div class="col-md-6 text-center" id="counter-kong">
+              <p class="counter-value-kong" style="font-size:24px; line-height: 30px;" data-count="46.90"></p>
+              <p style="font-size: 20px">Push</p>
+            </div>
+            <div class="col-md-6 text-center" id="counter-kong">
+              <p class="counter-value-kong" style="font-size:24px; line-height: 30px;" data-count="6"></p>
+              <p style="font-size: 20px">Picked</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" style="color: white">
+          B
+        </div>
+        <div class="col-lg-4 text-center" style="color: white">
+          C
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div style="font-size: 32px;margin-top:1em;">Summary</div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div style="font-size: 24px;">ชอบเลือกนักร้องเพลง ROCK .... . </div>
+      </div>
+    </div>
+
+    <!-- Coach Joey -->
+    <div id="coach-joey-profile" class="container animate-bottom" style="margin-top:8em;position:relative;color: white;display: none">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-3 text-center" style="color: white">
+            <h2 style="font-family:'Russo One">Coach Joey</h2>
+            <img src="/images/mock_user.png" class="w-75 rounded-circle" style="margin-top:2em;" />
+            <div class="row" style="margin-top: 3em;">
+              <div class="col-md-6 text-center" id="counter-joey">
+                <p class="counter-value-joey" style="font-size:24px; line-height: 30px;" data-count="46.90"></p>
+                <p style="font-size: 20px">Push</p>
+              </div>
+              <div class="col-md-6 text-center" id="counter-joey">
+                <p class="counter-value-joey" style="font-size:24px; line-height: 30px;" data-count="6"></p>
+                <p style="font-size: 20px">Picked</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center" style="color: white">
+            B
+          </div>
+          <div class="col-lg-4 text-center" style="color: white">
+            C
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div style="font-size: 32px;margin-top:1em;">Summary</div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div style="font-size: 24px;">ชอบเลือกนักร้องเพลง ROCK .... . </div>
+        </div>
+      </div>
+
+      <!-- Coach Kim -->
+    <div id="coach-kim-profile" class="container animate-bottom" style="margin-top:8em;position:relative;color: white;display: none">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-3 text-center" style="color: white">
+            <h2 style="font-family:'Russo One">Coach Kim</h2>
+            <img src="/images/mock_user.png" class="w-75 rounded-circle" style="margin-top:2em;" />
+            <div class="row" style="margin-top: 3em;">
+              <div class="col-md-6 text-center" id="counter-kim">
+                <p class="counter-value-kim" style="font-size:24px; line-height: 30px;" data-count="46.90"></p>
+                <p style="font-size: 20px">Push</p>
+              </div>
+              <div class="col-md-6 text-center" id="counter-kim">
+                <p class="counter-value-kim" style="font-size:24px; line-height: 30px;" data-count="6"></p>
+                <p style="font-size: 20px">Picked</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center" style="color: white">
+            B
+          </div>
+          <div class="col-lg-4 text-center" style="color: white">
+            C
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div style="font-size: 32px;margin-top:1em;">Summary</div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div style="font-size: 24px;">ชอบเลือกนักร้องเพลง ROCK .... . </div>
+        </div>
+      </div>
+
+      <!-- Coach Stamp -->
+    <div id="coach-stamp-profile" class="container animate-bottom" style="margin-top:8em;position:relative;color: white;display: none">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-3 text-center" style="color: white">
+            <h2 style="font-family:'Russo One">Coach Stamp</h2>
+            <img src="/images/mock_user.png" class="w-75 rounded-circle" style="margin-top:2em;" />
+            <div class="row" style="margin-top: 3em;">
+              <div class="col-md-6 text-center" id="counter-stamp">
+                <p class="counter-value-stamp" style="font-size:24px; line-height: 30px;" data-count="46.90"></p>
+                <p style="font-size: 20px">Push</p>
+              </div>
+              <div class="col-md-6 text-center" id="counter-stamp">
+                <p class="counter-value-stamp" style="font-size:24px; line-height: 30px;" data-count="6"></p>
+                <p style="font-size: 20px">Picked</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center" style="color: white">
+            B
+          </div>
+          <div class="col-lg-4 text-center" style="color: white">
+            C
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div style="font-size: 32px;margin-top:1em;">Summary</div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div style="font-size: 24px;">ชอบเลือกนักร้องเพลง ROCK .... . </div>
+        </div>
+      </div>
+
+      <!-- Coach Singto -->
+    <div id="coach-singto-profile" class="container animate-bottom" style="margin-top:8em;position:relative;color: white;display: none">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-3 text-center" style="color: white">
+            <h2 style="font-family:'Russo One">Coach Singto</h2>
+            <img src="/images/mock_user.png" class="w-75 rounded-circle" style="margin-top:2em;" />
+            <div class="row" style="margin-top: 3em;">
+              <div class="col-md-6 text-center" id="counter-singto">
+                <p class="counter-value-singto" style="font-size:24px; line-height: 30px;" data-count="46.90"></p>
+                <p style="font-size: 20px">Push</p>
+              </div>
+              <div class="col-md-6 text-center" id="counter-singto">
+                <p class="counter-value-singto" style="font-size:24px; line-height: 30px;" data-count="6"></p>
+                <p style="font-size: 20px">Picked</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center" style="color: white">
+            B
+          </div>
+          <div class="col-lg-4 text-center" style="color: white">
+            C
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div style="font-size: 32px;margin-top:1em;">Summary</div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div style="font-size: 24px;">ชอบเลือกนักร้องเพลง ROCK .... . </div>
+        </div>
+      </div>
+
+      <!-- Coach Da -->
+    <div id="coach-da-profile" class="container animate-bottom" style="margin-top:8em;position:relative;color: white;display: none">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-3 text-center" style="color: white">
+            <h2 style="font-family:'Russo One">Coach Da</h2>
+            <img src="/images/mock_user.png" class="w-75 rounded-circle" style="margin-top:2em;" />
+            <div class="row" style="margin-top: 3em;">
+              <div class="col-md-6 text-center" id="counter-da">
+                <p class="counter-value-da" style="font-size:24px; line-height: 30px;" data-count="46.90"></p>
+                <p style="font-size: 20px">Push</p>
+              </div>
+              <div class="col-md-6 text-center" id="counter-da">
+                <p class="counter-value-da" style="font-size:24px; line-height: 30px;" data-count="6"></p>
+                <p style="font-size: 20px">Picked</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center" style="color: white">
+            B
+          </div>
+          <div class="col-lg-4 text-center" style="color: white">
+            C
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div style="font-size: 32px;margin-top:1em;">Summary</div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div style="font-size: 24px;">ชอบเลือกนักร้องเพลง ROCK .... . </div>
+        </div>
+      </div>
+
 
     <!-- Section 4: Interesting Stats -->
     <div class="container" style="margin-top:20em;position:relative;" >
-        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Interesting Stats</h1>
+        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Interesting Section</h1>
     </div>
 
     <!-- Section 5: Conclusion -->
@@ -197,9 +419,64 @@
           })
           isPassed = 1
         }
-
       })
     </script>
+    <script>
+    var isPassedCoachKong = 0;
+      $(window).scroll(function() {
+        var oTop = $('#counter-kong').offset().top - window.innerHeight;
+        if (isPassedCoachKong == 0 && $(window).scrollTop() > oTop) {
+          $('.counter-value-kong').each(function() {
+            var $this = $(this),
+              countTo = $this.attr('data-count')
+            $({
+              countNum: $this.text()
+            }).animate({
+                countNum: countTo
+              },
+              {
+                duration: 3500,
+                easing: 'swing',
+                step: function() {
+                  $this.text(Math.floor(this.countNum));
+                },
+                complete: function() {
+                  $this.text(this.countNum + '%');
+                }
+              })
+          })
+          isPassedCoachKong = 1
+        }
+      })
+    </script>
+    <script>
+      var isPassedCoachJoey = 0;
+        $(window).scroll(function() {
+          var oTop = $('#counter-joey').offset().top - window.innerHeight;
+          if (isPassedCoachJoey == 0 && $(window).scrollTop() > oTop) {
+            $('.counter-value-joey').each(function() {
+              var $this = $(this),
+                countTo = $this.attr('data-count')
+              $({
+                countNum: $this.text()
+              }).animate({
+                  countNum: countTo
+                },
+                {
+                  duration: 3500,
+                  easing: 'swing',
+                  step: function() {
+                    $this.text(Math.floor(this.countNum));
+                  },
+                  complete: function() {
+                    $this.text(this.countNum + '%');
+                  }
+                })
+            })
+            isPassedCoachJoey = 1
+          }
+        })
+      </script>
 
     <!-- Try Audition Submit -->
     <script>
@@ -229,11 +506,15 @@
         var auditionButton = $('#auditionButton')
         var loader = $('#loader')
         $('#try-audition-form').on('submit',function (e) {
+          var song = $("#inputSong").val()
+          var artist = $("#inputArtist").val()
           var genre = $("#inputGenre").val()
           var sexuality = $("#inputSexuality").val()
           var age = $("#inputAge").val()
           var language = $("#inputLanguage").val()
           const form_answer = {
+            song: song,
+            artist: artist,
             genre: genre,
             sexuality: sexuality,
             age: age,
@@ -243,6 +524,7 @@
             type: 'post',
             url: '/api/audition',
             data: form_answer,
+            // success: () => {}
           })
           .done((data) => {
             auditionButton.hide()
@@ -266,8 +548,11 @@
           $('#auditionButton').show()
         })
       })
-
-      
+    </script>
+    <script>
+      function changeCoachProfile() {
+        alert('eee')
+      }
     </script>
 
     <!-- D3 Code -->
