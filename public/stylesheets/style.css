@@ -182,18 +182,18 @@ div.heatmaptip {
   animation: spin 2s linear infinite;
 }
 .node circle {
-  fill: #fff;
-  stroke: steelblue;
+  fill: #F7AEAE;
+  stroke: #CD5C5C;
   stroke-width: 3px;
 }
 
 .node text {
-  font: 12px sans-serif;
+  font: 15px 'Kanit';
 }
 
 .link {
   fill: none;
-  stroke: #ccc;
+  stroke: #424949;
   stroke-width: 2px;
 }
 
