@@ -1,13 +1,13 @@
 var Data =
 {
-  "name": "genre",
+  "name": "Genre",
   "children": [
     { 
-      "name": "Alternative & Hip-Hop",
+      "name": "Alternative/Hip-Hop",
       "children": [{"name": "NO"}]
     },
     {
-      "name": "Country & Acoustic",
+      "name": "Acoustic",
       "children": [
         {
          "name": "<23",
@@ -33,7 +33,7 @@ var Data =
       ]
     },
     {
-      "name": "Jazz & Soul & Blues",
+      "name": "Jazz/Soul/Blues",
       "children": [{"name": "NO"}]
     },
     {
@@ -99,7 +99,7 @@ function ready(error) {
   // console.log(data)
   // var data_kong, data_stamp, data_da, data_kim, data_joey, data_singto
 
-  // data_kong = data.filter(data => data.Coach === 'Kong')
+  // data_kong = data.filter(data => data.Coach === 'Kim')
   // data_kim = data.filter(data => data.Coach === 'Kim')
   // data_stamp = data.filter(data => data.Coach === 'Stamp')
   // data_joey = data.filter(data => data.Coach === 'Joey')
@@ -112,7 +112,7 @@ function ready(error) {
   // drawDecisionTree_Stamp(data_stamp)
   // drawDecisionTree_Singto(data_singto)
   // drawDecisionTree_Da(data_da)
-  drawDecisionTree_Kong(Data)
+  drawDecisionTree_Kim(Data)
 
 }
 // Collapse the node and all it's children
@@ -127,7 +127,7 @@ function draw(treeData){
   // append the svg object to the body of the page
   // appends a 'group' element to 'svg'
   // moves the 'group' element to the top left margin
-  var svg = d3.select("#drawDecisionTree_Kong").append("svg")
+  var svg = d3.select("#drawDecisionTree_Kim").append("svg")
       .attr("width", width + margin.right + margin.left)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
