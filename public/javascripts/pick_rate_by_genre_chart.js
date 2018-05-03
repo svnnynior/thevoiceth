@@ -115,7 +115,7 @@ function drawPickRateGenre_Stamp(data){
     height = 156 - margin.top - margin.bottom
 
   x.domain(data.map(function (d) { return d.genre }))
-  y.domain([0, 60])
+  y.domain([0, 64])
 
   draw_inside_graph_age_stamp()
   d3.select(window).on('resize', draw_inside_graph_age_stamp)

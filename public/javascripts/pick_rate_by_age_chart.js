@@ -74,9 +74,9 @@ function drawPickRateAge_Kong(data){
       .attr("x", function (d) { return x(d.age) })
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
-        if (d.age === '<20'){
+        if (d.age === '<23'){
             return 'E6B0AA'
-        }else if(d.age === '20-40'){
+        }else if(d.age === '23-30'){
         return 'F1948A'
         }else{
         return '#EC7063'
@@ -116,7 +116,7 @@ function drawPickRateAge_Stamp(data){
       height = 156 - margin.top - margin.bottom
   
     x.domain(data.map(function (d) { return d.age }))
-    y.domain([0, 50])
+    y.domain([0, 53])
   
     draw_inside_graph_age_stamp()
     d3.select(window).on('resize', draw_inside_graph_age_stamp)
@@ -148,9 +148,9 @@ function drawPickRateAge_Stamp(data){
         .attr("x", function (d) { return x(d.age) })
         .attr("y", function (d) { return y(d.percentage) })
         .style("fill", function(d){ 
-          if (d.age === '<20'){
+          if (d.age === '<23'){
             return 'E6B0AA'
-          }else if(d.age === '20-40'){
+          }else if(d.age === '23-30'){
             return 'F1948A'
           }else{
             return '#EC7063'
@@ -223,9 +223,9 @@ function drawPickRateAge_Kim(data){
       .attr("x", function (d) { return x(d.age) })
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
-        if (d.age === '<20'){
+        if (d.age === '<23'){
           return 'E6B0AA'
-        }else if(d.age === '20-40'){
+        }else if(d.age === '23-30'){
           return 'F1948A'
         }else{
           return '#EC7063'
@@ -298,9 +298,9 @@ function drawPickRateAge_Joey(data){
         .attr("x", function (d) { return x(d.age) })
         .attr("y", function (d) { return y(d.percentage) })
         .style("fill", function(d){ 
-          if (d.age === '<20'){
+          if (d.age === '<23'){
             return 'E6B0AA'
-          }else if(d.age === '20-40'){
+          }else if(d.age === '23-30'){
             return 'F1948A'
           }else{
             return '#EC7063'
@@ -372,9 +372,9 @@ function drawPickRateAge_Singto(data){
         .attr("x", function (d) { return x(d.age) })
         .attr("y", function (d) { return y(d.percentage) })
         .style("fill", function(d){ 
-          if (d.age === '<20'){
+          if (d.age === '<23'){
             return 'E6B0AA'
-          }else if(d.age === '20-40'){
+          }else if(d.age === '23-30'){
             return 'F1948A'
           }else{
             return '#EC7063'
@@ -446,9 +446,9 @@ function drawPickRateAge_Da(data){
       .attr("x", function (d) { return x(d.age) })
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
-        if (d.age === '<20'){
+        if (d.age === '<23'){
           return 'E6B0AA'
-        }else if(d.age === '20-40'){
+        }else if(d.age === '23-30'){
           return 'F1948A'
         }else{
           return '#EC7063'
