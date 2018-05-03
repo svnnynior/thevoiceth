@@ -84,7 +84,7 @@ function drawPickRateLang_Kong(data){
     var texts = g_bar_text.selectAll("text").data(data)
     // ENTER
     texts.enter().append("text")
-      .attr("x", function (d) { return x(d.lang) + 5})
+      .attr("x", function (d) { return x(d.lang) + 22})
       .attr("y", function (d) { return y(d.percentage) - 5})
       .style("margin-bottom", "10")
       .style("fill", 'white')
@@ -157,7 +157,7 @@ function drawPickRateLang_Stamp(data){
     var texts = g_bar_text_stamp.selectAll("text").data(data)
     // ENTER
     texts.enter().append("text")
-      .attr("x", function (d) { return x(d.lang) + 5})
+      .attr("x", function (d) { return x(d.lang) + 22})
       .attr("y", function (d) { return y(d.percentage) - 5})
       .style("margin-bottom", "10")
       .style("fill", 'white')
@@ -231,7 +231,7 @@ function drawPickRateLang_Kim(data){
     var texts = g_bar_text_kim.selectAll("text").data(data)
     // ENTER
     texts.enter().append("text")
-      .attr("x", function (d) { return x(d.lang) + 5})
+      .attr("x", function (d) { return x(d.lang) + 22})
       .attr("y", function (d) { return y(d.percentage) - 5})
       .style("margin-bottom", "10")
       .style("fill", 'white')
@@ -305,7 +305,7 @@ function drawPickRateLang_Joey(data){
     var texts = g_bar_text_joey.selectAll("text").data(data)
     // ENTER
     texts.enter().append("text")
-      .attr("x", function (d) { return x(d.lang) + 5})
+      .attr("x", function (d) { return x(d.lang) + 22})
       .attr("y", function (d) { return y(d.percentage) - 5})
       .style("margin-bottom", "10")
       .style("fill", 'white')
@@ -378,7 +378,7 @@ function drawPickRateLang_Singto(data){
     var texts = g_bar_text_singto.selectAll("text").data(data)
     // ENTER
     texts.enter().append("text")
-      .attr("x", function (d) { return x(d.lang) + 5})
+      .attr("x", function (d) { return x(d.lang) + 22})
       .attr("y", function (d) { return y(d.percentage) - 5})
       .style("margin-bottom", "10")
       .style("fill", 'white')
@@ -452,7 +452,7 @@ function drawPickRateLang_Da(data){
     var texts = g_bar_text_da.selectAll("text").data(data)
     // ENTER
     texts.enter().append("text")
-      .attr("x", function (d) { return x(d.lang) + 5})
+      .attr("x", function (d) { return x(d.lang) + 22})
       .attr("y", function (d) { return y(d.percentage) - 5})
       .style("margin-bottom", "10")
       .style("fill", 'white')

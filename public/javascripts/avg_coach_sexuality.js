@@ -66,7 +66,7 @@ function drawAvgPerSex(data){
     var texts = g_bar_text_avg_per_sex.selectAll("text").data(data)
     // ENTER
     texts.enter().append("text")
-      .attr("x", function (d) { return x(d.sexuality) + 8})
+      .attr("x", function (d) { return x(d.sexuality) + 24})
       .attr("y", function (d) { return y(d.avg_num_coach) - 5})
       .style("margin-bottom", "10")
       .style("fill", 'white')

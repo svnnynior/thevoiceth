@@ -5,7 +5,6 @@ d3.queue()
 function ready(error, data) {
   if (error) throw error
 
-  console.log(data)
   var data_kong, data_stamp, data_da, data_kim, data_joey, data_singto
 
   data_kong = data.filter(data => data.Coach === 'Kong')
@@ -25,8 +24,6 @@ function ready(error, data) {
 }
 
 function drawPickRateAge_Kong(data){
-
-    console.log(data)
 
   var svg_graph4 = d3.select("#chartPickRateAge_Kong").append("svg")
   
@@ -74,13 +71,7 @@ function drawPickRateAge_Kong(data){
       .attr("x", function (d) { return x(d.age) })
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
-        if (d.age === '<20'){
-            return 'E6B0AA'
-        }else if(d.age === '20-40'){
-        return 'F1948A'
-        }else{
-        return '#EC7063'
-        }
+        return '74B4ED'
       })
       .attr("width", x.bandwidth())
       .attr("height", function (d) { return height - y(d.percentage) })
@@ -116,7 +107,7 @@ function drawPickRateAge_Stamp(data){
       height = 156 - margin.top - margin.bottom
   
     x.domain(data.map(function (d) { return d.age }))
-    y.domain([0, 50])
+    y.domain([0, 60])
   
     draw_inside_graph_age_stamp()
     d3.select(window).on('resize', draw_inside_graph_age_stamp)
@@ -146,7 +137,8 @@ function drawPickRateAge_Stamp(data){
         .attr("x", function (d) { return x(d.age) })
         .attr("y", function (d) { return y(d.percentage) })
         .style("fill", function(d){ 
-          return '74B4ED'
+          if (d.age === '>40') return 'F1948A'
+          else return '74B4ED'
         })
         .attr("width", x.bandwidth())
         .attr("height", function (d) { return height - y(d.percentage) })
@@ -192,8 +184,6 @@ function drawPickRateAge_Kim(data){
     x.rangeRound([0, width])
     y.rangeRound([height, 0])
 
-    console.log(height)
-
     var xAxis = d3.axisBottom(x)
 
     function customXAxis(g) {
@@ -215,12 +205,10 @@ function drawPickRateAge_Kim(data){
       .attr("x", function (d) { return x(d.age) })
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
-        if (d.age === '<20'){
-          return 'E6B0AA'
-        }else if(d.age === '20-40'){
-          return 'F1948A'
+        if (d.age === '>40'){
+          return '74B4ED'
         }else{
-          return '#EC7063'
+          return 'F1948A'
         }
       })
       .attr("width", x.bandwidth())
@@ -267,8 +255,6 @@ function drawPickRateAge_Joey(data){
       x.rangeRound([0, width])
       y.rangeRound([height, 0])
   
-      console.log(height)
-  
       var xAxis = d3.axisBottom(x)
   
       function customXAxis(g) {
@@ -290,12 +276,10 @@ function drawPickRateAge_Joey(data){
         .attr("x", function (d) { return x(d.age) })
         .attr("y", function (d) { return y(d.percentage) })
         .style("fill", function(d){ 
-          if (d.age === '<20'){
-            return 'E6B0AA'
-          }else if(d.age === '20-40'){
+          if (d.age === '<23'){
             return 'F1948A'
           }else{
-            return '#EC7063'
+            return '74B4ED'
           }
         })
         .attr("width", x.bandwidth())
@@ -341,8 +325,6 @@ function drawPickRateAge_Singto(data){
       x.rangeRound([0, width])
       y.rangeRound([height, 0])
   
-      console.log(height)
-  
       var xAxis = d3.axisBottom(x)
   
       function customXAxis(g) {
@@ -364,12 +346,10 @@ function drawPickRateAge_Singto(data){
         .attr("x", function (d) { return x(d.age) })
         .attr("y", function (d) { return y(d.percentage) })
         .style("fill", function(d){ 
-          if (d.age === '<20'){
-            return 'E6B0AA'
-          }else if(d.age === '20-40'){
+          if (d.age === '<23'){
             return 'F1948A'
           }else{
-            return '#EC7063'
+            return '74B4ED'
           }
         })
         .attr("width", x.bandwidth())
@@ -415,8 +395,6 @@ function drawPickRateAge_Da(data){
     x.rangeRound([0, width])
     y.rangeRound([height, 0])
 
-    console.log(height)
-
     var xAxis = d3.axisBottom(x)
 
     function customXAxis(g) {
@@ -438,12 +416,10 @@ function drawPickRateAge_Da(data){
       .attr("x", function (d) { return x(d.age) })
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
-        if (d.age === '<20'){
-          return 'E6B0AA'
-        }else if(d.age === '20-40'){
+        if (d.age === '23-30'){
           return 'F1948A'
         }else{
-          return '#EC7063'
+          return '74B4ED'
         }
       })
       .attr("width", x.bandwidth())

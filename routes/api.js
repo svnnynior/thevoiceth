@@ -54,11 +54,137 @@ router.post('/songArtist', function(req, res, next) {
 
 router.post('/audition', function(req, res, next) {
 
-  const result = {
-    result: 'No',
-    coach: ['Kong', 'Joey']
+  const answer = req.body
+  var coach = []
+
+  // Coach Stamp
+  if (answer.genre === 'Jazz/Soul/Blues'){
+    if (answer.language === 'English') {
+      coach.push('Stamp')
+    }else {
+      if (Math.floor((Math.random() * 10) + 1) <= 8) {
+        coach.push('Stamp')
+      }
+    }
+  }else if (answer.genre === 'Hip-Hop/Alternative') {
+    if (Math.floor((Math.random() * 10) + 1) <= 7) {
+      coach.push('Stamp')
+    }
+  }else {
+    if (Math.floor((Math.random() * 10) + 1) <= 4) {
+      coach.push('Stamp')
+    }
   }
-  res.send(result)
+
+  // Coach Joey
+  if (answer.genre === 'Hip-Hop/Alternative' || answer.genre === 'Acoustic') {
+    if (answer.sexuality === 'Female') {
+      coach.push('Joey')
+    }else {
+      if (Math.floor((Math.random() * 10) + 1) <= 8) {
+        coach.push('Joey')
+      }
+    }
+  }else {
+    if (Math.floor((Math.random() * 10) + 1) <= 8) {
+      coach.push('Joey')
+    }
+  }
+
+  // Coach Kong
+  if (answer.genre === 'Rock') {
+    if (answer.sexuality === 'Male') {
+      coach.push('Kong')
+    }else {
+      if (Math.floor((Math.random() * 10) + 1) <= 8) {
+        coach.push('Kong')
+      }
+    }
+  }else if (answer.language === 'Others') {
+    coach.push('Kong')
+  }else {
+    if (Math.floor((Math.random() * 10) + 1) <= 5) {
+      coach.push('Kong')
+    }
+  }
+
+  // Coach Kim
+  if (answer.genre === 'Hip-Hop/Alternative' || answer.genre === 'Acoustic') {
+    if (answer.sexuality === 'Male') {
+      coach.push('Kim')
+    }else {
+      if (Math.floor((Math.random() * 10) + 1) <= 9) {
+        coach.push('Kim')
+      }
+    }
+  }else if (answer.language === 'Others') {
+    if (Math.floor((Math.random() * 10) + 1) <= 9) {
+      coach.push('Kim')
+    }
+  }else {
+    if (Math.floor((Math.random() * 10) + 1) <= 2) {
+      coach.push('Kim')
+    }
+  }
+
+  // Coach Singto
+  if (answer.genre === 'Rock') {
+    if (answer.language === 'English') {
+      coach.push('Singto')
+    }else {
+      if (Math.floor((Math.random() * 10) + 1) <= 9) {
+        coach.push('Singto')
+      }
+    }
+  }else if (answer.genre === 'Pop'){
+    if (answer.language === 'English') {
+      coach.push('Singto')
+    }else {
+      if (Math.floor((Math.random() * 10) + 1) <= 8) {
+        coach.push('Singto')
+      }
+    }
+  }else {
+    if (Math.floor((Math.random() * 10) + 1) <= 3) {
+      coach.push('Singto')
+    }
+  }
+
+  // Coach Da
+  if (answer.genre === 'Acoustic') {
+    if (answer.sexuality === 'Female') {
+      coach.push('Da')
+    }else {
+      if (Math.floor((Math.random() * 10) + 1) <= 9) {
+        coach.push('Da')
+      }
+    }
+  }else if (answer.language === 'Others') {
+    if (Math.floor((Math.random() * 10) + 1) <= 7) {
+      coach.push('Da')
+    }
+  }else {
+    if (Math.floor((Math.random() * 10) + 1) <= 2) {
+      coach.push('Da')
+    }
+  }
+
+  // Empty Coach
+  if (answer.sexuality === 'More than one person'){
+    if (answer.language === 'Thai') {
+      coach = []
+    }else {
+      if (Math.floor((Math.random() * 10) + 1) <= 6) {
+        coach = []
+      }
+    }
+  }
+
+  const results = {
+    result: coach.length !== 0,
+    coach: coach
+  }
+  res.send(results)
 
 })
 

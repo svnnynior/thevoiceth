@@ -69,12 +69,451 @@
       </div>
     </div>
 
-    <!-- Section 2: Try Audition -->
+    <!-- Section 3: Coaches Profile -->
     <div class="container" style="margin-top:20em;position:relative;" >
+        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Coaches Profiles</h1>
+    </div>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-md-5">
+        </div>
+        <div class="form-group col-md-2 text-center">
+          <label for="inputSelectCoach" style="color:white; margin-top: 2em;">Pick a Coach</label>
+          <select id="inputSelectCoach" class="form-control" onchange="changeCoachProfile()" required>
+            <option selected>Kong</option>
+            <option>Joey</option>
+            <option>Stamp</option>
+            <option>Kim</option>
+            <option>Singto</option>
+            <option>Da</option>
+          </select>
+        </div>
+        <div class="col-md-5">
+        </div>
+      </div>>
+    </div>
+
+    <!-- Coach Kong -->
+    <div id="coach-kong-profile" class="container animate-bottom" style="margin-top:3em;position:relative;color: white">
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-3 text-center" style="color: white">
+          <h2 style="font-family:'Russo One">Coach Kong</h2>
+          <img src="/images/kong.jpg" class="w-75 rounded-circle" style="margin-top:2em;" />
+          <div class="row" style="margin-top: 3em;">
+            <div class="col-md-6 text-center" id="counter-coach">
+              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="46.9"></p>
+              <p style="font-size: 20px">Push</p>
+            </div>
+            <div class="col-md-6 text-center" id="counter-coach">
+              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="41.2"></p>
+              <p style="font-size: 20px">Picked</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" style="color: white">
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateSex_Kong"></div>
+            <p style="font-size: 24px">Pick Rate by Sexuality</p>
+          </div>
+          <div class="row justify-content-lg-center" style="margin-top: 2.5em;">
+            <div id="chartPickRateAge_Kong"></div>
+            <p style="font-size: 24px">Pick Rate by Age</p>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" style="color: white">
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateGenre_Kong"></div>
+            <p style="font-size: 24px">
+              Pick Rate by Genre 
+              <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
+            </p>
+          </div>
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateLang_Kong"></div>
+            <p style="font-size: 24px">Pick Rate by Language</p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div style="font-size: 32px;margin-top:2em;">Summary</div>
+      </div>
+      <div class="row justify-content-md-center" style="margin-top: 3em;">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+          <div style="font-size: 24px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            มีอัตราการกดสูง แต่กลับมีอัตราการถูกเลือกน้อยเทียบกับโค้ชคนอื่น มักกดเลือกผู้เข้าแข่งขันที่ร้องเพลง Rock 
+            มีอัตราการกดเลือกสูงมากกับผู้เข้าแข่งขันที่ร้องเพลงภาษาอื่นๆ ที่ไม่ใช่ภาษาไทย และภาษาอังกฤษ
+          </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div id="drawDecisionTree_Kong"> </div>
+        <p style="font-size: 24px">Tree</p>
+      </div>
+    </div>
+  
+    <!-- Coach Joey -->
+    <div id="coach-joey-profile" class="container animate-bottom" style="margin-top:3em;position:relative;color: white;display: none">
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-3 text-center" style="color: white">
+          <h2 style="font-family:'Russo One">Coach Joey</h2>
+          <img src="/images/joey.jpg" class="w-75 rounded-circle" style="margin-top:2em;" />
+          <div class="row" style="margin-top: 3em;">
+            <div class="col-md-6 text-center" id="counter-coach">
+              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="37.3"></p>
+              <p style="font-size: 20px">Push</p>
+            </div>
+            <div class="col-md-6 text-center" id="counter-coach">
+              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="53.5"></p>
+              <p style="font-size: 20px">Picked</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" style="color: white">
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateSex_Joey"></div>
+            <p style="font-size: 24px">Pick Rate by Sexuality</p>
+          </div>
+          <div class="row justify-content-lg-center" style="margin-top: 2.5em;">
+            <div id="chartPickRateAge_Joey"></div>
+            <p style="font-size: 24px">Pick Rate by Age</p>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" style="color: white">
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateGenre_Joey"></div>
+            <p style="font-size: 24px">
+              Pick Rate by Genre 
+              <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
+            </p>
+          </div>
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateLang_Joey"></div>
+            <p style="font-size: 24px">Pick Rate by Language</p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div style="font-size: 32px;margin-top:2em;">Summary</div>
+      </div>
+      <div class="row justify-content-md-center" style="margin-top: 3em;">
+        <div class="col-md-1">
+          </div>
+          <div class="col-md-10">
+            <div style="font-size: 24px;">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ไม่ค่อยกดเลือกผู้เข้าแข่งขันง่ายๆ แต่มีอัตราการถูกผู้เข้าแข่งขันเลือกสูงมาก มีอัตราการกดเลือกผู้เข้าแข่งขันหญิงมากกว่าประเภทอื่นๆ 
+              มักเลือกผู้เข้าแข่งขันที่ร้องเพลงแนว Acoustic และ Hip-Hop/Alternative
+            </div>
+          </div>
+          <div class="col-md-1">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Coach Kim -->
+    <div id="coach-kim-profile" class="container animate-bottom" style="margin-top:3em;position:relative;color: white;display: none">
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-3 text-center" style="color: white">
+          <h2 style="font-family:'Russo One">Coach Kim</h2>
+          <img src="/images/kim.jpg" class="w-75 rounded-circle" style="margin-top:2em;" />
+          <div class="row" style="margin-top: 3em;">
+            <div class="col-md-6 text-center" id="counter-coach">
+              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="34.7"></p>
+              <p style="font-size: 20px">Push</p>
+            </div>
+            <div class="col-md-6 text-center" id="counter-coach">
+              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="55.4"></p>
+              <p style="font-size: 20px">Picked</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" style="color: white">
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateSex_Kim"></div>
+            <p style="font-size: 24px">Pick Rate by Sexuality</p>
+          </div>
+          <div class="row justify-content-lg-center"  style="margin-top: 2.5em;">
+            <div id="chartPickRateAge_Kim"></div>
+            <p style="font-size: 24px">Pick Rate by Age</p>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" style="color: white">
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateGenre_Kim"></div>
+            <p style="font-size: 24px">
+              Pick Rate by Genre 
+              <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
+            </p>
+          </div>
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateLang_Kim"></div>
+            <p style="font-size: 24px">Pick Rate by Language</p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div style="font-size: 32px;margin-top:2em;">Summary</div>
+      </div>
+      <div class="row justify-content-md-center" style="margin-top: 3em;">
+        <div class="col-md-1">
+          </div>
+          <div class="col-md-10">
+            <div style="font-size: 24px;">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ค่อนข้างเป็นโค้ชที่กดเลือกผู้เข้าแข่งขันยาก และมีอัตราการผู้เข้าแข่งขันเลือกสูงมาก ค่อนข้างจะเลือกผู้เข้าแข่งขันที่อยู่ในช่วงอายุไม่เกิน 30
+              มักกดเลือกผู้เข้าแข่งขันที่ร้องเพลงแนว Acoustic และ Hip-Hop/Alternative
+            </div>
+          </div>
+          <div class="col-md-1">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Coach Stamp -->
+    <div id="coach-stamp-profile" class="container animate-bottom" style="margin-top:3em;position:relative;color: white;display: none">
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-3 text-center" style="color: white">
+          <h2 style="font-family:'Russo One">Coach Stamp</h2>
+          <img src="/images/stamp.jpg" class="w-75 rounded-circle" style="margin-top:2em;" />
+          <div class="row" style="margin-top: 3em;">
+            <div class="col-md-6 text-center" id="counter-coach">
+              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="42.5"></p>
+              <p style="font-size: 20px">Push</p>
+            </div>
+            <div class="col-md-6 text-center" id="counter-coach">
+              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="43.5"></p>
+              <p style="font-size: 20px">Picked</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" style="color: white">
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateSex_Stamp"></div>
+            <p style="font-size: 24px">Pick Rate by Sexuality</p>
+          </div>
+          <div class="row justify-content-lg-center"  style="margin-top: 2.5em;">
+            <div id="chartPickRateAge_Stamp"></div>
+            <p style="font-size: 24px">Pick Rate by Age</p>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" style="color: white">
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateGenre_Stamp"></div>
+            <p style="font-size: 24px">
+              Pick Rate by Genre 
+              <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
+            </p>
+          </div>
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateLang_Stamp"></div>
+            <p style="font-size: 24px">Pick Rate by Language</p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div style="font-size: 32px;margin-top:2em;">Summary</div>
+      </div>
+      <div class="row justify-content-md-center" style="margin-top: 3em;">
+        <div class="col-md-1">
+          </div>
+          <div class="col-md-10">
+            <div style="font-size: 24px;">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              อัตราการเลือกและการถูกเลือกอยู่ในระดับกลางๆ มักกดเลือกผู้เข้าแข่งขันชายมากกว่าประเภทอื่นๆ
+              อัตราการกดเลือกผู้เข้าแข่งขันที่ร้องเพลง Hip-Hop/Alternative ค่อนข้างสูง และชอบกดเลือกผู้เข้าแข่งขันที่สูงอายุ
+            </div>
+          </div>
+          <div class="col-md-1">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Coach Singto -->
+    <div id="coach-singto-profile" class="container animate-bottom" style="margin-top:3em;position:relative;color: white;display: none">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-3 text-center" style="color: white">
+            <h2 style="font-family:'Russo One">Coach Singto</h2>
+            <img src="/images/singto.jpg" class="w-75 rounded-circle" style="margin-top:2em;" />
+            <div class="row" style="margin-top: 3em;">
+              <div class="col-md-6 text-center" id="counter-coach">
+                <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="39.9"></p>
+                <p style="font-size: 20px">Push</p>
+              </div>
+              <div class="col-md-6 text-center" id="counter-coach">
+                <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="50.6"></p>
+                <p style="font-size: 20px">Picked</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center" style="color: white">
+            <div class="row justify-content-lg-center" style="margin-top: 2em;">
+              <div id="chartPickRateSex_Singto"></div>
+              <p style="font-size: 24px">Pick Rate by Sexuality</p>
+            </div>
+            <div class="row justify-content-lg-center"  style="margin-top: 2.5em;">
+              <div id="chartPickRateAge_Singto"></div>
+              <p style="font-size: 24px">Pick Rate by Age</p>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center" style="color: white">
+            <div class="row justify-content-lg-center" style="margin-top: 2em;">
+              <div id="chartPickRateGenre_Singto"></div>
+              <p style="font-size: 24px">
+                Pick Rate by Genre 
+                <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
+              </p>
+            </div>
+            <div class="row justify-content-lg-center" style="margin-top: 2em;">
+              <div id="chartPickRateLang_Singto"></div>
+              <p style="font-size: 24px">Pick Rate by Language</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div style="font-size: 32px;margin-top:2em;">Summary</div>
+        </div>
+        <div class="row justify-content-md-center" style="margin-top: 3em;">
+          <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+              <div style="font-size: 24px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                อัตราการกดอยู่ในระดับกลางๆ ชอบกดเลือกผู้เข้าแข่งขันที่ร้องเพลง Rock และมีอัตราการกดเลือกผู้เข้าแข่งขันที่ร้องเพลงภาษาอังกฤษสูงแตกต่างกับโค้ชคนอื่น
+              </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+          </div>
+          <!-- <div style="font-size: 24px;">เลือก 4/24 ผช อายุ 23-30 ร้องเพลงภาษาไทย <br> เลือก 17/24 คนร้องเพลง Pop in eng <br> เลือก 6/7 ของคนร้องเพลง Rock in eng <br> </div> -->
+        </div>
+      </div>
+
+    <!-- Coach Da -->
+    <div id="coach-da-profile" class="container animate-bottom" style="margin-top:3em;position:relative;color: white;display: none">
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-3 text-center" style="color: white">
+          <h2 style="font-family:'Russo One">Coach Da</h2>
+          <img src="/images/da.jpg" class="w-75 rounded-circle" style="margin-top:2em;" />
+          <div class="row" style="margin-top: 3em;">
+            <div class="col-md-6 text-center" id="counter-coach">
+              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="38.4"></p>
+              <p style="font-size: 20px">Push</p>
+            </div>
+            <div class="col-md-6 text-center" id="counter-coach">
+              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="52.1"></p>
+              <p style="font-size: 20px">Picked</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" style="color: white">
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateSex_Da"></div>
+            <p style="font-size: 24px">Pick Rate by Sexuality</p>
+          </div>
+          <div class="row justify-content-lg-center"  style="margin-top: 2.5em;">
+            <div id="chartPickRateAge_Da"></div>
+            <p style="font-size: 24px">Pick Rate by Age</p>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" style="color: white">
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateGenre_Da"></div>
+            <p style="font-size: 24px">
+              Pick Rate by Genre 
+              <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
+            </p>
+          </div>
+          <div class="row justify-content-lg-center" style="margin-top: 2em;">
+            <div id="chartPickRateLang_Da"></div>
+            <p style="font-size: 24px">Pick Rate by Language</p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div style="font-size: 32px;margin-top:2em;">Summary</div>
+      </div>
+      <div class="row justify-content-md-center" style="margin-top: 3em;">
+        <div class="col-md-1">
+          </div>
+          <div class="col-md-10">
+            <div style="font-size: 24px;">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ค่อนข้างกดเลือกผู้เข้าแข่งขันยาก และมีอัตราการถูกผู้เข้าแข่งขันเลือกสูง มีอัตราการกดเลือกผู้เข้าแข่งขันหญิงมากกว่าประเภทอื่นๆ
+              และมักกดเลือกผู้เข้าแข่งขันที่ร้องเพลงแนว Acoustic
+            </div>
+          </div>
+          <div class="col-md-1">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Section 4: Interesting Stats -->
+    <div class="container" style="margin-top:20em;position:relative;" >
+        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Interesting Section</h1>
+    </div>
+    <div class="container">
+      <div class="row justify-content-lg-center" style="color: white; margin-top: 9em;">
+        <div class="col-lg-4 text-center">
+          <div id="chartAvgCoachPerLanguage">
+          </div>
+        </div>
+        <div class="col-lg-8 text-left">
+          <div style="font-size: 24px; font-style: italic">
+            Average Coach Pushed - Song's Language
+          </div>
+          <div style="font-size: 20px; margin-top: 1em;">
+            ผู้เข้าแข่งขันที่เลือกร้องเพลงด้วยเพลงภาษาอื่น ๆ ที่ไม่ใช่ ภาษาไทย และ ภาษาอังกฤษ มีโค้ชที่กดเลือกเป็นจำนวนมากที่สุด 
+            นอกจากนี้ เพลงที่เป็นเพลงสากลจะมีโค้ชกดเยอะกว่าเพลงภาษาไทย โดยมีโค้ชกดเฉลี่ยอยู่ที่ประมาณ 2 คน
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-lg-center" style="color: white; margin-top: 10em;">
+        <div class="col-lg-8 text-right">
+          <div style="font-size: 24px; font-style: italic">
+            Average Coach Pushed - Song's Genre
+            <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
+          </div>
+          <div style="font-size: 20px; margin-top: 1em;">
+            แนวเพลงที่ร้องแล้วมีแนวโน้มที่จะมีจำนวนโค้ชกดเลือกมากที่สุดได้แก่เพลงประเภทเพลง Rock แต่โดยรวม ๆ แล้วถือว่าไม่ต่างกันมากอย่างมีนัยสำคัญ
+          </div>
+        </div>
+        <div class="col-lg-4 text-center">
+          <div id="chartAvgCoachPerGenre">
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-lg-center" style="color: white; margin-top: 10em;">
+        <div class="col-lg-4 text-center">
+          <div id="chartAvgCoachPerSexuality">
+          </div>
+        </div>
+        <div class="col-lg-8 text-left">
+          <div style="font-size: 24px; font-style: italic">
+            Average Coach Pushed - Sexuality
+          </div>
+          <div style="font-size: 20px; margin-top: 1em;">
+            คำอธิบาย
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Section 2: Try Audition -->
+    <div class="container" style="margin-top:15em;position:relative;" >
         <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">The Try Audition</h1>
     </div>
     <form style="margin-top: 7em; color:white;" id="try-audition-form">
-      <div class="form-row align-items-center">
+      <!-- <div class="form-row align-items-center">
         <div class="col-md-4">
         </div>
         <div class="form-group col-md-2">
@@ -87,7 +526,7 @@
         </div>
         <div class="col-md-4">
         </div>
-      </div>
+      </div> -->
       <div class="form-row align-items-center" style="margin-top: 1em;">
         <div class="col-md-2">
         </div>
@@ -153,381 +592,6 @@
       <button id="tryAgainButton" style="margin-top: 5em;" type="submit" class="btn btn-lg btn-danger">Try Again</button>
     </div>
 
-    <!-- Section 3: Coaches Profile -->
-    <div class="container" style="margin-top:20em;position:relative;" >
-        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Coaches Profiles</h1>
-    </div>
-    <div class="container">
-      <div class="row justify-content-md-center">
-        <div class="col-md-5">
-        </div>
-        <div class="form-group col-md-2 text-center">
-          <label for="inputSelectCoach" style="color:white; margin-top: 2em;">Pick a Coach</label>
-          <select id="inputSelectCoach" class="form-control" onchange="changeCoachProfile()" required>
-            <option selected>Kong</option>
-            <option>Joey</option>
-            <option>Stamp</option>
-            <option>Kim</option>
-            <option>Singto</option>
-            <option>Da</option>
-          </select>
-        </div>
-        <div class="col-md-5">
-        </div>
-      </div>>
-    </div>
-
-    <!-- Coach Kong -->
-    <div id="coach-kong-profile" class="container animate-bottom" style="margin-top:3em;position:relative;color: white">
-      <div class="row justify-content-lg-center">
-        <div class="col-lg-3 text-center" style="color: white">
-          <h2 style="font-family:'Russo One">Coach Kong</h2>
-          <img src="/images/kong.jpg" class="w-75 rounded-circle" style="margin-top:2em;" />
-          <div class="row" style="margin-top: 3em;">
-            <div class="col-md-6 text-center" id="counter-coach">
-              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="46.9"></p>
-              <p style="font-size: 20px">Push</p>
-            </div>
-            <div class="col-md-6 text-center" id="counter-coach">
-              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="41.2"></p>
-              <p style="font-size: 20px">Picked</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center" style="color: white">
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateSex_Kong"></div>
-            <p style="font-size: 24px">Pick Rate by Sexuality</p>
-          </div>
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateAge_Kong"></div>
-            <p style="font-size: 24px">Pick Rate by Age</p>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center" style="color: white">
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateGenre_Kong"></div>
-            <p style="font-size: 24px">
-              Pick Rate by Genre 
-              <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
-            </p>
-          </div>
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateLang_Kong"></div>
-            <p style="font-size: 24px">Pick Rate by Language</p>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div style="font-size: 32px;margin-top:1em;">Summary</div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div style="font-size: 24px;">ชอบเลือกนักร้องเพลง ROCK .... . </div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div id="drawDecisionTree_Kong"> </div>
-        <p style="font-size: 24px">Tree</p>
-      </div>
-    </div>
-  
-    <!-- Coach Joey -->
-    <div id="coach-joey-profile" class="container animate-bottom" style="margin-top:3em;position:relative;color: white;display: none">
-      <div class="row justify-content-lg-center">
-        <div class="col-lg-3 text-center" style="color: white">
-          <h2 style="font-family:'Russo One">Coach Joey</h2>
-          <img src="/images/joey.jpg" class="w-75 rounded-circle" style="margin-top:2em;" />
-          <div class="row" style="margin-top: 3em;">
-            <div class="col-md-6 text-center" id="counter-coach">
-              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="37.3"></p>
-              <p style="font-size: 20px">Push</p>
-            </div>
-            <div class="col-md-6 text-center" id="counter-coach">
-              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="53.5"></p>
-              <p style="font-size: 20px">Picked</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center" style="color: white">
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateSex_Joey"></div>
-            <p style="font-size: 24px">Pick Rate by Sexuality</p>
-          </div>
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateAge_Joey"></div>
-            <p style="font-size: 24px">Pick Rate by Age</p>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center" style="color: white">
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateGenre_Joey"></div>
-            <p style="font-size: 24px">
-              Pick Rate by Genre 
-              <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
-            </p>
-          </div>
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateLang_Joey"></div>
-            <p style="font-size: 24px">Pick Rate by Language</p>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div style="font-size: 32px;margin-top:1em;">Summary</div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div style="font-size: 24px;">ชอบเลือกนักร้องเพลง ROCK .... . </div>
-      </div>
-    </div>
-  
-    <!-- Coach Kim -->
-    <div id="coach-kim-profile" class="container animate-bottom" style="margin-top:3em;position:relative;color: white;display: none">
-      <div class="row justify-content-lg-center">
-        <div class="col-lg-3 text-center" style="color: white">
-          <h2 style="font-family:'Russo One">Coach Kim</h2>
-          <img src="/images/kim.jpg" class="w-75 rounded-circle" style="margin-top:2em;" />
-          <div class="row" style="margin-top: 3em;">
-            <div class="col-md-6 text-center" id="counter-coach">
-              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="34.7"></p>
-              <p style="font-size: 20px">Push</p>
-            </div>
-            <div class="col-md-6 text-center" id="counter-coach">
-              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="55.4"></p>
-              <p style="font-size: 20px">Picked</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center" style="color: white">
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateSex_Kim"></div>
-            <p style="font-size: 24px">Pick Rate by Sexuality</p>
-          </div>
-          <div class="row justify-content-lg-center"  style="margin-top: 2em;">
-            <div id="chartPickRateAge_Kim"></div>
-            <p style="font-size: 24px">Pick Rate by Age</p>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center" style="color: white">
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateGenre_Kim"></div>
-            <p style="font-size: 24px">
-              Pick Rate by Genre 
-              <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
-            </p>
-          </div>
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateLang_Kim"></div>
-            <p style="font-size: 24px">Pick Rate by Language</p>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div style="font-size: 32px;margin-top:1em;">Summary</div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div style="font-size: 24px;">ชอบเลือกนักร้องเพลง ROCK .... . </div>
-      </div>
-    </div>
-  
-    <!-- Coach Stamp -->
-    <div id="coach-stamp-profile" class="container animate-bottom" style="margin-top:3em;position:relative;color: white;display: none">
-      <div class="row justify-content-lg-center">
-        <div class="col-lg-3 text-center" style="color: white">
-          <h2 style="font-family:'Russo One">Coach Stamp</h2>
-          <img src="/images/stamp.jpg" class="w-75 rounded-circle" style="margin-top:2em;" />
-          <div class="row" style="margin-top: 3em;">
-            <div class="col-md-6 text-center" id="counter-coach">
-              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="42.5"></p>
-              <p style="font-size: 20px">Push</p>
-            </div>
-            <div class="col-md-6 text-center" id="counter-coach">
-              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="43.5"></p>
-              <p style="font-size: 20px">Picked</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center" style="color: white">
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateSex_Stamp"></div>
-            <p style="font-size: 24px">Pick Rate by Sexuality</p>
-          </div>
-          <div class="row justify-content-lg-center"  style="margin-top: 2em;">
-            <div id="chartPickRateAge_Stamp"></div>
-            <p style="font-size: 24px">Pick Rate by Age</p>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center" style="color: white">
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateGenre_Stamp"></div>
-            <p style="font-size: 24px">
-              Pick Rate by Genre 
-              <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
-            </p>
-          </div>
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateLang_Stamp"></div>
-            <p style="font-size: 24px">Pick Rate by Language</p>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div style="font-size: 32px;margin-top:1em;">Summary</div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div style="font-size: 24px;">ชอบเลือกนักร้องเพลง ROCK .... . </div>
-      </div>
-    </div>
-    
-    <!-- Coach Singto -->
-    <div id="coach-singto-profile" class="container animate-bottom" style="margin-top:3em;position:relative;color: white;display: none">
-        <div class="row justify-content-lg-center">
-          <div class="col-lg-3 text-center" style="color: white">
-            <h2 style="font-family:'Russo One">Coach Singto</h2>
-            <img src="/images/singto.jpg" class="w-75 rounded-circle" style="margin-top:2em;" />
-            <div class="row" style="margin-top: 3em;">
-              <div class="col-md-6 text-center" id="counter-coach">
-                <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="39.9"></p>
-                <p style="font-size: 20px">Push</p>
-              </div>
-              <div class="col-md-6 text-center" id="counter-coach">
-                <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="50.6"></p>
-                <p style="font-size: 20px">Picked</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 text-center" style="color: white">
-            <div class="row justify-content-lg-center" style="margin-top: 2em;">
-              <div id="chartPickRateSex_Singto"></div>
-              <p style="font-size: 24px">Pick Rate by Sexuality</p>
-            </div>
-            <div class="row justify-content-lg-center"  style="margin-top: 2em;">
-              <div id="chartPickRateAge_Singto"></div>
-              <p style="font-size: 24px">Pick Rate by Age</p>
-            </div>
-          </div>
-          <div class="col-lg-4 text-center" style="color: white">
-            <div class="row justify-content-lg-center" style="margin-top: 2em;">
-              <div id="chartPickRateGenre_Singto"></div>
-              <p style="font-size: 24px">
-                Pick Rate by Genre 
-                <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
-              </p>
-            </div>
-            <div class="row justify-content-lg-center" style="margin-top: 2em;">
-              <div id="chartPickRateLang_Singto"></div>
-              <p style="font-size: 24px">Pick Rate by Language</p>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-md-center">
-          <div style="font-size: 32px;margin-top:1em;">Summary</div>
-        </div>
-        <div class="row justify-content-md-center">
-          <div style="font-size: 24px;">เลือก 4/24 ผช อายุ 23-30 ร้องเพลงภาษาไทย <br> เลือก 17/24 คนร้องเพลง Pop in eng <br> เลือก 6/7 ของคนร้องเพลง Rock in eng <br> </div>
-        </div>
-      </div>
-
-    <!-- Coach Da -->
-    <div id="coach-da-profile" class="container animate-bottom" style="margin-top:3em;position:relative;color: white;display: none">
-      <div class="row justify-content-lg-center">
-        <div class="col-lg-3 text-center" style="color: white">
-          <h2 style="font-family:'Russo One">Coach Da</h2>
-          <img src="/images/da.jpg" class="w-75 rounded-circle" style="margin-top:2em;" />
-          <div class="row" style="margin-top: 3em;">
-            <div class="col-md-6 text-center" id="counter-coach">
-              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="38.4"></p>
-              <p style="font-size: 20px">Push</p>
-            </div>
-            <div class="col-md-6 text-center" id="counter-coach">
-              <p class="counter-value-coach" style="font-size:24px; line-height: 30px;" data-count="52.1"></p>
-              <p style="font-size: 20px">Picked</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center" style="color: white">
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateSex_Da"></div>
-            <p style="font-size: 24px">Pick Rate by Sexuality</p>
-          </div>
-          <div class="row justify-content-lg-center"  style="margin-top: 2em;">
-            <div id="chartPickRateAge_Da"></div>
-            <p style="font-size: 24px">Pick Rate by Age</p>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center" style="color: white">
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateGenre_Da"></div>
-            <p style="font-size: 24px">
-              Pick Rate by Genre 
-              <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
-            </p>
-          </div>
-          <div class="row justify-content-lg-center" style="margin-top: 2em;">
-            <div id="chartPickRateLang_Da"></div>
-            <p style="font-size: 24px">Pick Rate by Language</p>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div style="font-size: 32px;margin-top:1em;">Summary</div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div style="font-size: 24px;">ชอบเลือกนักร้องเพลง ROCK .... . </div>
-      </div>
-    </div>
-
-
-    <!-- Section 4: Interesting Stats -->
-    <div class="container" style="margin-top:20em;position:relative;" >
-        <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Interesting Section</h1>
-    </div>
-    <div class="container">
-      <div class="row justify-content-lg-center" style="color: white; margin-top: 9em;">
-        <div class="col-lg-4 text-center">
-          <div id="chartAvgCoachPerLanguage">
-          </div>
-        </div>
-        <div class="col-lg-8 text-left">
-          <div style="font-size: 24px; font-style: italic">
-            Average Coach Pushed - Song's Language
-          </div>
-          <div style="font-size: 20px; margin-top: 1em;">
-            ผู้เข้าแข่งขันที่เลือกร้องเพลงด้วยเพลงภาษาอื่น ๆ ที่ไม่ใช่ ภาษาไทย และ ภาษาอังกฤษ มีโค้ชที่กดเลือกเป็นจำนวนมากที่สุด 
-            นอกจากนี้ เพลงที่เป็นเพลงสากลจะมีโค้ชกดเยอะกว่าเพลงภาษาไทย โดยมีโค้ชกดเฉลี่ยอยู่ที่ประมาณ 2 คน
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-lg-center" style="color: white; margin-top: 10em;">
-        <div class="col-lg-8 text-right">
-          <div style="font-size: 24px; font-style: italic">
-            Average Coach Pushed - Song's Genre
-            <span id="legend-title-info"><i class="fas fa-info-circle" style="font-size:20px"></i></span>
-          </div>
-          <div style="font-size: 20px; margin-top: 1em;">
-            แนวเพลงที่ร้องแล้วมีแนวโน้มที่จะมีจำนวนโค้ชกดเลือกมากที่สุดได้แก่เพลงประเภทเพลงร็อค แต่โดยรวม ๆ แล้วถือว่าไม่ต่างกันมากอย่างมีนัยสำคัญ
-          </div>
-        </div>
-        <div class="col-lg-4 text-center">
-          <div id="chartAvgCoachPerGenre">
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-lg-center" style="color: white; margin-top: 10em;">
-        <div class="col-lg-4 text-center">
-          <div id="chartAvgCoachPerSexuality">
-          </div>
-        </div>
-        <div class="col-lg-8 text-left">
-          <div style="font-size: 24px; font-style: italic">
-            Average Coach Pushed - Sexuality
-          </div>
-          <div style="font-size: 20px; margin-top: 1em;">
-            คำอธิบาย
-          </div>
-        </div>
-      </div>
-    </div>
-    
-
     <!-- Section 5: Conclusion -->
     <div class="container" style="margin-top:20em;position:relative;" >
         <h1 class="text-center" style="font-family:'Russo One';font-size:30px; color: white">Conclusion</h1>
@@ -557,8 +621,8 @@
               .duration(200)
               .style("opacity", .9)
               legendtip.html("<div> 1: Thai Country <br> 2: Pop <br> 3: Rock <br> 4: Hip-Hop/Alternative <br> 5: Acoustic <br> 6: Jazz/Soul/Blues <br> 7: R&B </div>" )
-              .style("left", (d3.event.pageX) + "px")
-              .style("top", (d3.event.pageY - 50) + "px")
+              .style("left", (d3.event.pageX + 20) + "px")
+              .style("top", (d3.event.pageY - 100) + "px")
           })
           .on('mouseout', function(d){
             legendtip.transition()
@@ -632,8 +696,8 @@
         var result1 = $('#auditionResult1')
         var result2 = $('#auditionResult2')
         $('#loader').hide()
-        if(audition_result.result === 'Yes') {
-          result1.text("Congratulation !")
+        if(audition_result.result) {
+          result1.text("Congratulations !")
           var coach_name = ''
           audition_result.coach.forEach(name => {
             coach_name = coach_name + name + ', '
@@ -653,15 +717,15 @@
         var auditionButton = $('#auditionButton')
         var loader = $('#loader')
         $('#try-audition-form').on('submit',function (e) {
-          var song = $("#inputSong").val()
-          var artist = $("#inputArtist").val()
+          // var song = $("#inputSong").val()
+          // var artist = $("#inputArtist").val()
           var genre = $("#inputGenre").val()
           var sexuality = $("#inputSexuality").val()
           var age = $("#inputAge").val()
           var language = $("#inputLanguage").val()
           const form_answer = {
-            song: song,
-            artist: artist,
+            // song: song,
+            // artist: artist,
             genre: genre,
             sexuality: sexuality,
             age: age,
