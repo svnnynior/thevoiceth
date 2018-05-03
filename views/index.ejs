@@ -140,6 +140,7 @@
     <div class="col-md-12 text-center audition-result animate-bottom" id="auditionResultBlock" style="display: none; margin-top: 3em;">
       <div id="auditionResult1"></div>
       <div id="auditionResult2" style="margin-top: 1em;"></div>
+      <button id="tryAgainButton" style="margin-top: 5em;" type="submit" class="btn btn-lg btn-danger">Try Again</button>
     </div>
 
     <!-- Section 3: Coaches Profile -->
@@ -221,6 +222,7 @@
         resultDiv.show()
       }
 
+      // Try Audition Button
       $(function () {
         var timeout;
         var auditionButton = $('#auditionButton')
@@ -250,6 +252,17 @@
             
           })
           e.preventDefault()
+        })
+      })
+
+      // Try Again
+      $(function () {
+        var tryAgainButton = $('#tryAgainButton')
+        tryAgainButton.on('click',function (e) {
+          e.preventDefault()
+          tryAgainButton.hide()
+          $('#auditionResultBlock').hide()
+          $('#auditionButton').show()
         })
       })
 
