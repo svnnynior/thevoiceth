@@ -219,9 +219,9 @@ function drawPickRateSex_Kim(data){
       .attr("x", function (d) { return x(d.Sexuality) })
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
-        if (d.Sexuality%3 == 0){
+        if (d.Sexuality === 'Male'){
           return '74B4ED'
-        }else if(d.Sexuality%3 == 1){
+        }else if(d.Sexuality === 'Female'){
           return 'FE737A'
         }else{
           return 'AC88FF'
@@ -293,9 +293,9 @@ function drawPickRateSex_Stamp(data){
       .attr("x", function (d) { return x(d.Sexuality) })
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
-        if (d.Sexuality%3 == 0){
+        if (d.Sexuality === 'Male'){
           return '74B4ED'
-        }else if(d.Sexuality%3 == 1){
+        }else if(d.Sexuality === 'Female'){
           return 'FE737A'
         }else{
           return 'AC88FF'
@@ -367,9 +367,9 @@ function drawPickRateSex_Singto(data){
       .attr("x", function (d) { return x(d.Sexuality) })
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
-        if (d.Sexuality%3 == 0){
+        if (d.Sexuality === 'Male'){
           return '74B4ED'
-        }else if(d.Sexuality%3 == 1){
+        }else if(d.Sexuality === 'Female'){
           return 'FE737A'
         }else{
           return 'AC88FF'
@@ -418,8 +418,7 @@ function drawPickRateSex_Da(data){
   function draw_inside_graph_sex_da(){
     x.rangeRound([0, width])
     y.rangeRound([height, 0])
-
-
+    
     var xAxis = d3.axisBottom(x)
 
     function customXAxis(g) {
@@ -441,9 +440,9 @@ function drawPickRateSex_Da(data){
       .attr("x", function (d) { return x(d.Sexuality) })
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
-        if (d.Sexuality%3 == 0){
+        if (d.Sexuality === 'Male'){
           return '74B4ED'
-        }else if(d.Sexuality%3 == 1){
+        }else if(d.Sexuality === 'Female'){
           return 'FE737A'
         }else{
           return 'AC88FF'
