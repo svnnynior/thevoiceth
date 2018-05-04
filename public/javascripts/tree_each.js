@@ -61,7 +61,7 @@ var Data =
                   "name": "English",
                   "children": [{"name": "YES 3/4"}]
                 },{
-                  "name": "Thailand",
+                  "name": "Thai",
                   "children": [{"name": "NO 2/10"}]
                 }]
               }]
@@ -172,7 +172,7 @@ function draw(treeData){
         links = treeData.descendants().slice(1);
 
     // Normalize for fixed-depth.
-    nodes.forEach(function(d){ d.y = d.depth * 140});
+    nodes.forEach(function(d){ d.y = d.depth * 135});
 
     // ****************** Nodes section ***************************
 
