@@ -1,47 +1,47 @@
-var Data =
+var Data = 
 {
-  "name": "Genre",
+  "name": "genre",
   "children": [
     { 
-      "name": "Alternative/Hip-Hop",
-      "children": [{"name": "NO"}]
+      "name": "Alternative & Hip-Hop",
+      "children": [{"name": "NO 4/9"}]
     },
     {
-      "name": "Acoustic",
+      "name": "Country & Acoustic",
       "children": [
         {
          "name": "<23",
-         "children":[{"name": "NO"}]
+         "children":[{"name": "NO 7/18"}]
         },
         {
         "name": "23-30",
-        "children": [{"name": "YES"}] 
+        "children": [{"name": "YES 10/16"}] 
         },
         {
          "name": ">30",
          "children":[
            {
              "name":"Female",
-             "children":[{"name": "NO"}]
+             "children":[{"name": "NO 0/6!"}]
            },
            {
             "name": "Male",
-            "children": [{"name": "YES"}]
+            "children": [{"name": "YES 3/5"}]
            }
           ]
         }
       ]
     },
     {
-      "name": "Jazz/Soul/Blues",
-      "children": [{"name": "NO"}]
+      "name": "Jazz & Soul & Blues",
+      "children": [{"name": "NO 6/24"}]
     },
     {
       "name": "Pop",
       "children": [
         {
           "name": "<23",
-          "children": [{"name": "NO"}]
+          "children": [{"name": "NO 17/47"}]
         },
         {
           "name": "23-30",
@@ -51,7 +51,7 @@ var Data =
             "children": [
             {
               "name": "Female",
-              "children": [{"name": "NO"}]
+              "children": [{"name": "NO 11/31"}]
             },{
               "name": "Male",
               "children": [{
@@ -59,35 +59,35 @@ var Data =
                 "children": [
                 {
                   "name": "English",
-                  "children": [{"name": "YES"}]
+                  "children": [{"name": "YES 3/4"}]
                 },{
                   "name": "Thailand",
-                  "children": [{"name": "NO"}]
+                  "children": [{"name": "NO 2/10"}]
                 }]
               }]
             },{
               "name": "Duo",
-              "children": [{"name": "NO"}]
+              "children": [{"name": "NO 1/5"}]
             }]
           }]
         },
         {
           "name": ">30",
-          "children": [{"name": "NO"}]
+          "children": [{"name": "NO 4/18"}]
         }
       ]
     },
     {
       "name": "R&B",
-      "children": [{"name": "NO"}]
+      "children": [{"name": "NO 6/15"}]
     },
     {
       "name": "Rock",
-      "children": [{"name": "NO"}]
+      "children": [{"name": "NO 5/21"}]
     },
     {
       "name": "Thai Country",
-      "children": [{"name": "NO"}]
+      "children": [{"name": "NO 13/36"}]
     }
   ]
 };
@@ -99,7 +99,7 @@ function ready(error) {
   // console.log(data)
   // var data_kong, data_stamp, data_da, data_kim, data_joey, data_singto
 
-  // data_kong = data.filter(data => data.Coach === 'Kim')
+  // data_kong = data.filter(data => data.Coach === 'Kong')
   // data_kim = data.filter(data => data.Coach === 'Kim')
   // data_stamp = data.filter(data => data.Coach === 'Stamp')
   // data_joey = data.filter(data => data.Coach === 'Joey')
@@ -112,7 +112,7 @@ function ready(error) {
   // drawDecisionTree_Stamp(data_stamp)
   // drawDecisionTree_Singto(data_singto)
   // drawDecisionTree_Da(data_da)
-  drawDecisionTree_Kim(Data)
+  drawDecisionTree_Kong(Data)
 
 }
 // Collapse the node and all it's children
@@ -147,6 +147,8 @@ function draw(treeData){
   root.y0 = 0;
 
   // Collapse after the second level
+  console.log('root')
+  console.log(root)
 
   root.children.forEach(collapse);
 
@@ -219,10 +221,10 @@ function draw(treeData){
     nodeUpdate.select('circle.node')
       .attr('r', 20)
       .style("fill", function(d) {
-          return d._children ? "#A9D6D9" : d.data.name == 'YES' ? '#71EBA8' : d.data.name == 'NO'?'#EB718B':"#A9D6D9";
+          return d._children ? "#A9D6D9" : d.data.name.split(" ")[0] == 'YES' ? '#71EBA8' : d.data.name.split(" ")[0] == 'NO'?'#EB718B':"#A9D6D9";
       })
       .style("stroke", function(d){
-        return d.data.name == 'YES' ? '#28985B' : d.data.name == 'NO' ? '#982828' : '#236266';
+        return d.data.name.split(" ")[0] == 'YES' ? '#28985B' : d.data.name.split(" ")[0] == 'NO' ? '#982828' : '#236266';
       } )
       .attr('cursor', 'pointer');
 
