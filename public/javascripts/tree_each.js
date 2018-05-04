@@ -1,13 +1,13 @@
 var Data = 
 {
-  "name": "genre",
+  "name": "Genre",
   "children": [
     { 
       "name": "Alternative & Hip-Hop",
       "children": [{"name": "NO 4/9"}]
     },
     {
-      "name": "Country & Acoustic",
+      "name": "Acoustic",
       "children": [
         {
          "name": "<23",
