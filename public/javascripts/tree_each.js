@@ -147,8 +147,6 @@ function draw(treeData){
   root.y0 = 0;
 
   // Collapse after the second level
-  console.log('root')
-  console.log(root)
 
   root.children.forEach(collapse);
 

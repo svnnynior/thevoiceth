@@ -270,8 +270,6 @@ function drawPickRateLang_Joey(data){
     x.rangeRound([0, width])
     y.rangeRound([height, 0])
 
-    console.log(height)
-
     var xAxis = d3.axisBottom(x)
 
     function customXAxis(g) {
@@ -342,8 +340,6 @@ function drawPickRateLang_Singto(data){
   function draw_inside_graph_age_singto(){
     x.rangeRound([0, width])
     y.rangeRound([height, 0])
-
-    console.log(height)
 
     var xAxis = d3.axisBottom(x)
 

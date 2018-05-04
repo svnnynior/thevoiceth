@@ -122,8 +122,6 @@ function drawPickRateGenre_Stamp(data){
     x.rangeRound([0, width])
     y.rangeRound([height, 0])
 
-    console.log(height)
-
     var xAxis = d3.axisBottom(x)
 
     function customXAxis(g) {
