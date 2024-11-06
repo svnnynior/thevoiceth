@@ -28,3 +28,4 @@ vscode
 ##################
 ## Node log files##
 npm-debug.log
+.vercel
