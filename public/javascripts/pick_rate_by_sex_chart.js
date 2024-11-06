@@ -72,11 +72,11 @@ function drawPickRateSex_Kong(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.Sexuality === 'Male'){
-          return 'F1948A'
+          return '#F1948A'
         }else if(d.Sexuality === 'Female'){
-          return '74B4ED'
+          return '#74B4ED'
         }else{
-          return 'F1948A'
+          return '#F1948A'
         }
       })
       .attr("width", x.bandwidth())
@@ -146,11 +146,11 @@ function drawPickRateSex_Joey(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.Sexuality === 'Male'){
-          return '74B4ED'
+          return '#74B4ED'
         }else if(d.Sexuality === 'Female'){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -220,11 +220,11 @@ function drawPickRateSex_Kim(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.Sexuality === 'Male'){
-          return 'F1948A'
+          return '#F1948A'
         }else if(d.Sexuality === 'Female'){
-          return '74B4ED'
+          return '#74B4ED'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -294,11 +294,11 @@ function drawPickRateSex_Stamp(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.Sexuality === 'Male'){
-          return 'F1948A'
+          return '#F1948A'
         }else if(d.Sexuality === 'Female'){
-          return '74B4ED'
+          return '#74B4ED'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -368,11 +368,11 @@ function drawPickRateSex_Singto(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.Sexuality === 'Male'){
-          return '74B4ED'
+          return '#74B4ED'
         }else if(d.Sexuality === 'Female'){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -441,11 +441,11 @@ function drawPickRateSex_Da(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.Sexuality === 'Male'){
-          return '74B4ED'
+          return '#74B4ED'
         }else if(d.Sexuality === 'Female'){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())

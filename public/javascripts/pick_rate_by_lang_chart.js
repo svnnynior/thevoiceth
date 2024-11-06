@@ -73,9 +73,9 @@ function drawPickRateLang_Kong(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -146,9 +146,9 @@ function drawPickRateLang_Stamp(data){
     .attr("y", function (d) { return y(d.percentage) })
     .style("fill", function(d){ 
       if (d.percentage === max){
-        return 'F1948A'
+        return '#F1948A'
       }else{
-        return '74B4ED'
+        return '#74B4ED'
       }
     })
     .attr("width", x.bandwidth())
@@ -220,9 +220,9 @@ function drawPickRateLang_Kim(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -292,9 +292,9 @@ function drawPickRateLang_Joey(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -363,9 +363,9 @@ function drawPickRateLang_Singto(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -437,9 +437,9 @@ function drawPickRateLang_Da(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())

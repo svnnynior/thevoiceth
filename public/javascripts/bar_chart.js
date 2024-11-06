@@ -62,9 +62,9 @@ function drawChart1(data){
       .attr("y", function (d) { return y(d.NumSeason) })
       .style("fill", function(d){ 
         if (d.NumSeason === '6'){
-          return 'FE737A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -138,9 +138,9 @@ function drawChart2(data){
       .attr("y", function (d) { return y(d.Win) })
       .style("fill", function(d){ 
         if (d.Win === '2'){
-          return 'FE737A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())

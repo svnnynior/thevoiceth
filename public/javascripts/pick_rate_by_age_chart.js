@@ -71,7 +71,7 @@ function drawPickRateAge_Kong(data){
       .attr("x", function (d) { return x(d.age) })
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
-        return '74B4ED'
+        return '#74B4ED'
       })
       .attr("width", x.bandwidth())
       .attr("height", function (d) { return height - y(d.percentage) })
@@ -137,8 +137,8 @@ function drawPickRateAge_Stamp(data){
         .attr("x", function (d) { return x(d.age) })
         .attr("y", function (d) { return y(d.percentage) })
         .style("fill", function(d){ 
-          if (d.age === '>40') return 'F1948A'
-          else return '74B4ED'
+          if (d.age === '>40') return '#F1948A'
+          else return '#74B4ED'
         })
         .attr("width", x.bandwidth())
         .attr("height", function (d) { return height - y(d.percentage) })
@@ -206,9 +206,9 @@ function drawPickRateAge_Kim(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.age === '>40'){
-          return '74B4ED'
+          return '#74B4ED'
         }else{
-          return 'F1948A'
+          return '#F1948A'
         }
       })
       .attr("width", x.bandwidth())
@@ -277,9 +277,9 @@ function drawPickRateAge_Joey(data){
         .attr("y", function (d) { return y(d.percentage) })
         .style("fill", function(d){ 
           if (d.age === '<23'){
-            return 'F1948A'
+            return '#F1948A'
           }else{
-            return '74B4ED'
+            return '#74B4ED'
           }
         })
         .attr("width", x.bandwidth())
@@ -347,9 +347,9 @@ function drawPickRateAge_Singto(data){
         .attr("y", function (d) { return y(d.percentage) })
         .style("fill", function(d){ 
           if (d.age === '<23'){
-            return 'F1948A'
+            return '#F1948A'
           }else{
-            return '74B4ED'
+            return '#74B4ED'
           }
         })
         .attr("width", x.bandwidth())
@@ -417,9 +417,9 @@ function drawPickRateAge_Da(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.age === '23-30'){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())

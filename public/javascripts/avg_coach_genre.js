@@ -58,8 +58,8 @@ function drawAvgPerGenre(data){
       .attr("x", function (d) { return x(d.genre) })
       .attr("y", function (d) { return y(d.avg_num_coach) })
       .style("fill", function(d){ 
-        if (d.genre === '3') return 'F1948A'
-        else return '74B4ED'
+        if (d.genre === '3') return '#F1948A'
+        else return '#74B4ED'
       })
       .attr("width", x.bandwidth())
       .attr("height", function (d) { return height - y(d.avg_num_coach) })

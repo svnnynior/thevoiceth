@@ -73,9 +73,9 @@ function drawPickRateGenre_Kong(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -144,9 +144,9 @@ function drawPickRateGenre_Stamp(data){
     .attr("y", function (d) { return y(d.percentage) })
     .style("fill", function(d){ 
       if (d.percentage === max){
-        return 'F1948A'
+        return '#F1948A'
       }else{
-        return '74B4ED'
+        return '#74B4ED'
       }
     })
     .attr("width", x.bandwidth())
@@ -218,9 +218,9 @@ function drawPickRateGenre_Kim(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -292,9 +292,9 @@ function drawPickRateGenre_Joey(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -365,9 +365,9 @@ function drawPickRateGenre_Singto(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())
@@ -439,9 +439,9 @@ function drawPickRateGenre_Da(data){
       .attr("y", function (d) { return y(d.percentage) })
       .style("fill", function(d){ 
         if (d.percentage === max){
-          return 'F1948A'
+          return '#F1948A'
         }else{
-          return '74B4ED'
+          return '#74B4ED'
         }
       })
       .attr("width", x.bandwidth())

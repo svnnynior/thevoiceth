@@ -58,7 +58,7 @@ function drawAvgPerSex(data){
       .attr("x", function (d) { return x(d.sexuality) })
       .attr("y", function (d) { return y(d.avg_num_coach) })
       .style("fill", function(d){ 
-        return '74B4ED'
+        return '#74B4ED'
       })
       .attr("width", x.bandwidth())
       .attr("height", function (d) { return height - y(d.avg_num_coach) })
